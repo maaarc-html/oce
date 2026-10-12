@@ -1,0 +1,114 @@
+/* OCE Turismo — medidas del frame "OCE Turismo" (1440 px).
+   --k (definida en hero.css y repetida en las secciones de escenario) es 1px de diseño y escala con el ancho. */
+
+/* Hero: sin degradé oscuro, título azul y lema más ancho */
+.hero--turismo .hero__photo { top: 0; left: 0; width: 100%; height: 100%; }
+.hero--turismo .hero__photo::after { background: none; }
+.hero--turismo .hero__curve { top: calc(var(--k) * 845.65); left: calc(var(--k) * -150.5); }
+.hero--turismo .hero__title { top: calc(var(--k) * 199); color: var(--color-primary); text-transform: uppercase; }
+.hero--turismo .hero__lead { top: calc(var(--k) * 428); width: calc(var(--k) * 545); color: #393a3b; }
+.hero--turismo .hero__scroll { top: calc(var(--k) * 838); }
+.hero--turismo .hero__tagline {
+  top: calc(var(--k) * 965); width: min(935px, 100% - 48px);
+  font-size: clamp(15px, calc(var(--k) * 21), 21px); line-height: 1.905;
+}
+
+/* Tipos de viaje: 3 filas de 3 tarjetas */
+.viajes { width: min(1093px, 100% - 48px); margin: 155px auto 0; }
+.viajes__row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 56px; --tit-h: 60px; --gap: 16.5px; }
+.viajes__row + .viajes__row { margin-top: 97px; }
+.viajes__row--2 { --tit-h: 30px; --gap: 18px; }
+.viajes__row--3 { --gap: 8px; }
+.viaje { text-align: center; }
+.viaje__media { position: relative; }
+.viaje__img { width: 100%; aspect-ratio: 327 / 341; object-fit: cover; border-radius: 17px 40px 17px 50px; }
+.viaje__arrow { position: absolute; left: 50%; bottom: -27px; translate: -50% 0; }
+.viaje__arrow img { width: 49px; height: 49px; }
+.viajes__row--3 .viaje__arrow { bottom: -24px; }
+.viaje__title { width: min(246px, 100%); min-height: var(--tit-h); margin: 44px auto 0; font: 600 22px/30px var(--font-body); font-feature-settings: "liga" 0; }
+.viaje__title--bold { font-weight: 700; }
+.viaje__desc { max-width: var(--w, 248px); margin: var(--gap) auto 0; font: 400 16px/30px var(--font-body); letter-spacing: -.2px; }
+
+/* Destinos + por qué elegir OCE Turismo: collage de 1440 px; las capas se solapan, así que se ubican con coordenadas del diseño */
+.destinos, .redes { --k: calc(min(100vw, 1440px) / 1440); }
+.destinos { position: relative; width: min(100%, 1440px); height: calc(var(--k) * 1692); margin: 77px auto 0; }
+.destinos > * { position: absolute; margin: 0; }
+.destinos__panel {
+  z-index: 0; left: calc(var(--k) * 146); top: calc(var(--k) * 40); width: calc(var(--k) * 981); height: calc(var(--k) * 428);
+  padding: calc(var(--k) * 107) 0 0 calc(var(--k) * 123); border-radius: 13.25% 4.08% 15.29% 4.08% / 30.4% 9.35% 35% 9.35%;
+}
+.destinos__panel h2 { margin: 0; font: 800 calc(var(--k) * 40)/calc(var(--k) * 35) var(--font-body); }
+.destinos__panel p { margin: calc(var(--k) * 27) 0 0; width: calc(var(--k) * 413); font: 500 calc(var(--k) * 15)/calc(var(--k) * 35) var(--font-body); letter-spacing: -.2px; }
+.destinos__bullet { position: absolute; left: calc(var(--k) * 92); top: calc(var(--k) * 115); width: calc(var(--k) * 15); height: calc(var(--k) * 15); }
+.destinos__btn { z-index: 2; min-width: 0; width: calc(var(--k) * 308); height: calc(var(--k) * 57); font-size: clamp(10px, calc(var(--k) * 13), 13px); white-space: nowrap; }
+.destinos__btn--1 { left: calc(var(--k) * 264); top: calc(var(--k) * 439); }
+.destinos__btn--2 { left: calc(var(--k) * 790); top: calc(var(--k) * 1527); }
+
+.destinos__eiffel { z-index: 1; left: calc(var(--k) * 722); top: calc(var(--k) * 40); width: calc(var(--k) * 573); aspect-ratio: 573 / 948; }
+.destinos__eiffel > img, .destinos__pisa > img { position: absolute; height: auto; max-width: none; }
+.destinos__eiffel-foto { left: 0; top: 27.22%; width: 100%; aspect-ratio: 573 / 690; border-radius: 13.96% 6.98% 26.18% 6.98% / 11.6% 5.8% 21.74% 5.8%; }
+.destinos__eiffel-corte { left: 9.42%; top: 0; width: 78.53%; z-index: 1; }
+.destinos__avion { left: 16.75%; top: 80.91%; width: 97.73%; z-index: 2; }
+
+.destinos__pisa { z-index: 1; left: calc(var(--k) * 149); top: calc(var(--k) * 988); width: calc(var(--k) * 573); aspect-ratio: 573 / 644; }
+.destinos__pisa-foto { left: 0; top: 19.57%; width: 100%; aspect-ratio: 573 / 518; border-radius: 13.96% 6.98% 26.18% 6.98% / 15.44% 7.72% 28.96% 7.72%; }
+.destinos__pisa-corte { left: 26.88%; top: 0; width: 61.43%; z-index: 1; }
+
+.destinos__why-title { left: calc(var(--k) * 270); top: calc(var(--k) * 531); width: calc(var(--k) * 594); font: 800 calc(var(--k) * 40)/calc(var(--k) * 65) var(--font-body); color: var(--color-primary); }
+.destinos__checks { left: calc(var(--k) * 275); top: calc(var(--k) * 667); width: calc(var(--k) * 302); padding: 0; list-style: none; font: 500 calc(var(--k) * 17)/calc(var(--k) * 35) var(--font-body); letter-spacing: -.2px; }
+.destinos__checks li::before { content: "✔\00a0"; font-family: "Segoe UI Symbol", "Apple Symbols", var(--font-body); }
+.destinos__cta-title { left: calc(var(--k) * 793); top: calc(var(--k) * 1153); width: calc(var(--k) * 514); font: 800 calc(var(--k) * 50)/calc(var(--k) * 65) var(--font-body); color: var(--color-primary); }
+.destinos__cta-text { left: calc(var(--k) * 793); top: calc(var(--k) * 1366); width: calc(var(--k) * 473); font: 500 calc(var(--k) * 17)/calc(var(--k) * 35) var(--font-body); letter-spacing: -.2px; }
+
+/* Publicaciones de Instagram: tira de 4 tarjetas que se corta en los bordes */
+.redes { position: relative; height: calc(var(--k) * 618); margin: 44px 0 calc(var(--k) * 174); }
+.redes__post { position: absolute; top: 0; height: calc(var(--k) * 618); object-fit: cover; box-shadow: calc(var(--k) * 6) calc(var(--k) * 6) calc(var(--k) * 50) rgb(0 0 0 / .3); }
+.redes__post--1 { left: calc(50% + var(--k) * -769); width: calc(var(--k) * 355); border-radius: calc(var(--k) * 24); }
+.redes__post--2 { left: calc(50% + var(--k) * -384); width: calc(var(--k) * 354); height: calc(var(--k) * 616); border-radius: calc(var(--k) * 30); }
+.redes__post--3 { left: calc(50% + var(--k) * -5); width: calc(var(--k) * 353); border-radius: calc(var(--k) * 26); }
+.redes__post--4 { top: calc(var(--k) * -2); left: calc(50% + var(--k) * 368); width: calc(var(--k) * 355); border-radius: calc(var(--k) * 24); }
+
+@media (max-width: 960px) {
+  .viajes { margin-top: 72px; }
+  .viajes__row { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; row-gap: 56px; --tit-h: 0px; }
+  .viajes__row + .viajes__row { margin-top: 56px; }
+  .viaje__title { font-size: 19px; line-height: 26px; margin-top: 40px; }
+  .viaje__desc { font-size: 15px; line-height: 26px; }
+  .viaje__arrow img { width: 40px; height: 40px; }
+  .viaje__arrow { bottom: -22px; }
+
+  /* Destinos: el collage pasa a una columna */
+  .destinos { display: flex; flex-direction: column; gap: 36px; width: min(640px, 100% - 48px); height: auto; margin: 72px auto 0; }
+  .destinos > *, .destinos__eiffel > img, .destinos__pisa > img { position: static; }
+  .destinos__eiffel > img, .destinos__pisa > img { position: absolute; }
+  .destinos__panel { position: relative; left: auto; top: auto; width: auto; height: auto; padding: 48px 28px 88px 56px; border-radius: 80px 24px 90px 24px; }
+  .destinos__panel h2 { font-size: 32px; line-height: 1.2; }
+  .destinos__panel p { width: auto; margin-top: 16px; font-size: 15px; line-height: 1.9; }
+  .destinos__bullet { left: 28px; top: 62px; width: 15px; height: 15px; }
+  .destinos__btn { align-self: center; width: auto; min-width: 280px; height: 57px; font-size: 13px; }
+  .destinos__btn--1 { margin-top: -64px; }
+  .destinos__eiffel, .destinos__pisa { position: relative; left: auto; top: auto; width: 78%; align-self: center; }
+  .destinos__why-title, .destinos__cta-title { width: auto; font-size: 34px; line-height: 1.3; }
+  .destinos__checks, .destinos__cta-text { width: auto; font-size: 16px; line-height: 2; }
+  .destinos__cta-text { line-height: 1.9; }
+
+  .redes { display: flex; gap: 16px; height: auto; margin: 56px 0 72px; padding: 0 24px 56px; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .redes__post { position: static; flex: none; width: 260px; height: auto; scroll-snap-align: center; border-radius: 22px; box-shadow: 4px 4px 24px rgb(0 0 0 / .25); }
+  .redes__post--2 { height: auto; }
+}
+
+@media (max-width: 720px) {
+  .hero--turismo .hero__photo { top: 0; left: 0; width: 100%; height: 620px; }
+  .hero--turismo .hero__photo::after { background: rgb(30 30 30 / .55); }
+  .hero--turismo .hero__title { top: auto; color: var(--color-white); font-size: 40px; }
+  .hero--turismo .hero__lead { top: auto; width: auto; color: var(--color-white); }
+  .hero--turismo .hero__scroll { top: auto; }
+  .hero--turismo .hero__tagline { top: auto; width: auto; font-size: 15px; line-height: 1.8; }
+}
+
+@media (max-width: 560px) {
+  .viajes__row { grid-template-columns: 1fr; row-gap: 48px; }
+  .viaje__desc { max-width: min(var(--w, 248px), 100%); }
+  .viaje__media { width: min(327px, 100%); margin: 0 auto; }
+  .destinos__eiffel, .destinos__pisa { width: 88%; }
+}
