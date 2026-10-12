@@ -1,0 +1,148 @@
+/* Work & Study Dubai — medidas del frame "WAS Dubai" (1440 px)
+   Paleta de la página: rojo #d42902 para títulos y verde #008441 para paneles y viñetas. */
+.page { --dub-red: #d42902; --dub-green: #008441; }
+.page { overflow: clip; } /* los anillos no deben invadir el footer */
+.br-desktop { display: inline; }
+
+/* Hero: foto aérea de Dubái, logotipo "Work and Study Dubai" en lugar del h1 de texto */
+@media (min-width: 721px) {
+  .dub-hero.hero--page .hero__photo { top: calc(var(--k) * -31); left: calc(var(--k) * -27); width: calc(100% + var(--k) * 410); height: calc(var(--k) * 1121); }
+  .dub-hero.hero--page .hero__photo::after { background: linear-gradient(106.87deg, rgb(30 30 30 / .595) 14.2%, rgb(30 30 30 / 0) 38.4%); }
+  .dub-hero.hero--page .hero__title { left: calc(var(--k) * 151); top: calc(var(--k) * 247); width: calc(var(--k) * 304); }
+  .dub-hero.hero--page .hero__lead { left: calc(var(--k) * 151); top: calc(var(--k) * 447); width: calc(var(--k) * 363); text-shadow: 0 10px 60px #000; }
+  .dub-hero.hero--page .hero__scroll { top: calc(var(--k) * 818); }
+  .dub-hero.hero--page .hero__tagline { width: min(984px, 100% - 48px); }
+}
+@media (min-width: 721px) and (max-width: 1100px) {
+  .dub-hero.hero--page .hero__lead { width: calc(var(--k) * 520); font-size: 15px; line-height: 1.7; }
+}
+/* Hero en móvil: logotipo más chico y foto que llega hasta la flecha */
+@media (max-width: 720px) {
+  .dub-hero.hero--page .hero__title { width: min(260px, 70%); }
+  .dub-hero.hero--page .hero__photo { inset: 0 0 190px 0; width: 100%; height: auto; }
+  .dub-hero.hero--page .hero__scroll { margin-top: 56px; }
+  .dub-hero.hero--page .hero__tagline { margin-top: 48px; }
+}
+.dub-hero .hero__title img { display: block; width: 100%; height: auto; }
+.dub-hero .hero__tagline strong { color: var(--color-accent); }
+
+/* Título rojo de sección */
+.dub-title { margin: 0; font: 800 45px/75px var(--font-body); color: var(--dub-red); white-space: nowrap; }
+
+/* Por qué Dubái + duración del programa */
+.dub-why { display: grid; grid-template-columns: minmax(0, 573fr) minmax(0, 571fr); width: min(1144px, 100% - 48px); margin: 34px auto 0; align-items: start; }
+.dub-why__photo { margin-top: 16px; aspect-ratio: 573 / 487; }
+.dub-why__title2 { margin-top: 78px; }
+.dub-why__title { margin-left: 82px; }
+
+.dub-plans { margin-top: 3px; }
+.dub-plan { position: relative; max-width: 519px; padding-left: 40px; }
+.dub-plan + .dub-plan { margin-top: 30px; }
+.dub-plan::before, .dub-list li::before, .dub-list2 li::before, .dub-bp::before {
+  content: ""; position: absolute; left: 3px; top: 5.5px; width: 19px; height: 19px; background: url("../assets/icons/was-dubai-bullet.svg") center / contain no-repeat;
+}
+.dub-plan h3, .dub-plan p { margin: 0; font: 500 15px/30px var(--font-body); letter-spacing: -.2px; }
+.dub-plan h3 { font-weight: 800; }
+
+.dub-ventajas { display: grid; grid-template-columns: 267px 300px; width: 567px; margin: 23px 0 0 84px; }
+.dub-list { margin: 0; padding: 0; list-style: none; }
+.dub-list li { position: relative; max-width: 244px; padding-left: 33px; font: 500 17px/40px var(--font-body); letter-spacing: -.2px; }
+.dub-list--2 li { max-width: 254px; }
+.dub-list li::before { left: 0; top: 10.5px; }
+
+/* Burj Khalifa: la aguja (PNG recortado) sobresale por arriba de la foto */
+.dub-burj { position: relative; width: 501px; max-width: 100%; margin: -71px 0 0 58px; padding-top: 212px; }
+.dub-burj__photo { aspect-ratio: 501 / 555; border-radius: 150px 40px 80px 40px; } /* en el diseño la esquina superior izquierda de esta foto mide 150 px (y la inferior derecha 80) */
+.dub-burj__spire { position: absolute; left: 26.4px; top: 0; width: 322.06px; height: 742.06px; max-width: none; pointer-events: none; }
+.dub-burj__note {
+  position: absolute; left: 225px; top: 633px; box-sizing: border-box; width: 326.77px; height: 268.38px; margin: 0; padding: 53px 36px 0 49px;
+  border-radius: 110px 30px 120px 25px; background: var(--dub-green); color: var(--color-white); font: 600 15px/40px var(--font-body); letter-spacing: -.2px;
+}
+
+/* Intakes y costo de vida */
+.dub-cost { display: grid; grid-template-columns: minmax(0, 573fr) minmax(0, 571fr); width: min(1144px, 100% - 48px); margin: 39px auto 0; align-items: start; }
+.dub-cost__photo { margin-top: 27px; aspect-ratio: 573 / 746; }
+.dub-cost__title { margin-left: 62px; line-height: 65px; }
+.dub-cost__title2 { margin-top: 66px; }
+.dub-bp { position: relative; margin-left: 97px; font: 500 17px/40px var(--font-body); letter-spacing: -.2px; }
+.dub-bp::before { left: -34px; top: 10.5px; }
+.dub-cost__intro { margin-top: 15px; margin-bottom: 0; max-width: 466px; }
+.dub-cost__budget { margin-top: 1px; max-width: 459px; }
+.dub-cost__budget p { margin: 0; }
+.dub-cost__budget ul { margin: 0; padding: 0 0 0 25px; }
+.dub-cost__nota { font: italic 500 13px/40px var(--font-body); }
+
+/* Panel verde: ingresos, visado, requisitos médicos */
+.panel.dub-info {
+  display: grid; grid-template-columns: 320px 346px minmax(0, 1fr); align-items: start;
+  width: min(1133px, 100% - 32px); min-height: 917px; margin: 67px auto 0; padding: 75px 40px 40px 97px; box-sizing: border-box; background: var(--dub-green);
+}
+.dub-info h2 { margin: 0; font: 800 36px/45px var(--font-body); }
+.dub-info p { margin: 0; font: 600 17px/35px var(--font-body); letter-spacing: -.2px; }
+@media (min-width: 961px) { .dub-info__col--1 p, .dub-info__col--2 p { white-space: nowrap; } } /* los cortes de línea son los del diseño */
+.dub-info__col--1 h2 { line-height: 75px; }
+.dub-info__col--1 p { max-width: 280px; margin-top: 1px; }
+.dub-info__col--2 h2 { max-width: 306px; }
+.dub-info__col--2 h2 + p { max-width: 282px; margin-top: 10.5px; }
+.dub-info__col--2 .dub-info__h2b { margin-top: 50.2px; }
+.dub-info__col--2 .dub-info__h2b + p { max-width: 293px; margin-top: 13.6px; }
+.dub-info__col--2 .dub-info__h2b + p + p { margin-top: 35px; }
+.dub-info__col--3 h2 { max-width: 360px; }
+.dub-info__col--3 p { max-width: 276px; }
+.dub-info__col--3 h2 + p { margin-top: 33px; }
+
+/* Boletos aéreos y requisitos */
+.dub-req { display: grid; grid-template-columns: minmax(0, 573fr) minmax(0, 571fr); width: min(1144px, 100% - 48px); margin: 159px auto 177px; align-items: start; }
+.dub-req__title2 { margin-top: 66px; line-height: 60px; }
+.dub-list2 { margin: 0; padding: 0; list-style: none; }
+.dub-list2 li { position: relative; padding-left: 41px; font: 500 17px/35px var(--font-body); letter-spacing: -.2px; }
+.dub-list2 li::before { left: 2px; top: 8px; }
+.dub-list2--40 { margin-top: 7px; max-width: 460px; }
+.dub-list2--40 li { line-height: 40px; }
+.dub-list2--40 li::before { top: 10.5px; }
+.dub-list2--35 { margin-top: 1px; max-width: 418px; }
+.dub-req__photo { border-radius: 150px 40px 80px 40px; margin: 2px 0 0 41px; width: 501px; max-width: calc(100% - 41px); aspect-ratio: 501 / 799; }
+.dub-req__btn { position: relative; margin: -24px 0 0 97px; }
+.dub-req__right { display: flex; flex-direction: column; align-items: flex-start; }
+
+/* Anillos decorativos del fondo */
+.ring--rojo { width: 739.041px; height: 739.041px; left: calc(50% - 1046.9px); top: 2920px; transform: rotate(-17.05deg); }
+.ring--verde { width: 739.041px; height: 739.041px; left: calc(50% + 237.1px); top: 4986px; transform: rotate(34.36deg); }
+
+@media (max-width: 960px) {
+  .br-desktop { display: none; }
+  .dub-why, .dub-cost, .dub-req { grid-template-columns: minmax(0, 1fr); row-gap: 32px; }
+  .dub-why { margin-top: 40px; }
+  .dub-why__photo, .dub-cost__photo { margin-top: 0; }
+  .dub-why__left { display: flex; flex-direction: column; order: 2; }
+  .dub-why__right { order: 1; }
+  .dub-why__title2 { margin-top: 40px; }
+  .dub-title { font-size: 34px; line-height: 1.3; white-space: normal; }
+  .dub-why__title, .dub-cost__title { margin-left: 0; }
+  .dub-ventajas { width: auto; margin-left: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 16px; }
+  .dub-burj { margin: 32px auto 0; width: 100%; max-width: 560px; padding-top: 0; }
+  .dub-burj__photo, .dub-req__photo { border-radius: 90px 28px 56px 28px; }
+  .dub-burj__spire { display: none; }
+  .dub-burj__note { position: relative; left: auto; top: auto; width: auto; height: auto; margin: -48px 24px 0 32px; padding: 40px 28px; border-radius: 80px 24px 90px 24px; }
+  .dub-cost { margin-top: 56px; }
+  .dub-cost__title2 { margin-top: 32px; }
+  .dub-bp { margin-left: 34px; }
+  .panel.dub-info { grid-template-columns: minmax(0, 1fr); row-gap: 32px; min-height: 0; margin-top: 56px; padding: 56px 28px 64px; border-radius: 80px 24px 90px 24px; }
+  .dub-info__col p, .dub-info__col h2 + p, .dub-info__col--2 .dub-info__h2b + p { max-width: none; }
+  .dub-info h2 { font-size: 30px; line-height: 1.25; max-width: none; }
+  .dub-req { margin: 96px auto 72px; }
+  .dub-req__title2 { margin-top: 32px; line-height: 1.3; }
+  .dub-list2--40, .dub-list2--35 { max-width: none; }
+  .dub-req__photo { margin: 0; width: 100%; max-width: 560px; }
+  .dub-req__btn { margin: -24px auto 0; }
+  .dub-req__right { align-items: center; }
+  .photo-shape { border-radius: 56px 28px 90px 28px; }
+  .ring--rojo, .ring--verde { opacity: .5; }
+}
+@media (max-width: 560px) {
+  .dub-ventajas { grid-template-columns: minmax(0, 1fr); }
+  .dub-list li, .dub-list--2 li { max-width: none; }
+  .dub-req__btn { min-width: 0; width: min(308px, 100% - 32px); }
+  .ring--verde { left: 40%; }
+  .ring--rojo { left: -60%; }
+}
