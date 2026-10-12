@@ -1,0 +1,108 @@
+/* Gestión de VISA — medidas del frame "Gestion de VISA" (1440 px) */
+
+/* Hero: variante de la página (la curva, la flecha y el lema vienen de hero.css) */
+.hero--visa .hero__lead strong { font-weight: 900; text-transform: uppercase; }
+@media (min-width: 721px) {
+  .hero--visa .hero__photo { top: calc(var(--k) * -112); left: calc(var(--k) * -182); width: calc(100% + var(--k) * 224); height: calc(var(--k) * 1268); }
+  .hero--visa .hero__photo img { object-fit: fill; }
+  .hero--visa .hero__photo::after { background: linear-gradient(103.56deg, rgb(30 30 30 / .455) 20.728%, rgb(30 30 30 / 0) 49.57%); }
+  .hero--visa .hero__title {
+    left: calc(var(--k) * 155); top: calc(var(--k) * 133); width: calc(var(--k) * 700);
+    font-size: clamp(36px, calc(var(--k) * 65), 65px); line-height: 1.1538; text-shadow: 0 4px 100px rgb(0 0 0 / .9);
+  }
+  .hero--visa .hero__lead { left: calc(var(--k) * 155); top: calc(var(--k) * 450); width: calc(var(--k) * 521); font-weight: 600; text-shadow: 0 4px 35px #000; }
+  .hero--visa .hero__tagline { top: calc(var(--k) * 976); width: min(893px, 100% - 48px); line-height: 1.818; }
+}
+
+/* La página recorta lo que sobresale en vertical (el pasaporte queda debajo del pie, como en el diseño) */
+.visa-page { overflow: clip; }
+
+/* Cifras: panel azul con pasaporte y avión que sobresalen por arriba */
+.visa-stats {
+  position: relative; display: grid; grid-template-columns: 480px 480px; align-content: start; width: min(1153px, 100% - 32px); height: 404px; margin-top: 42px;
+  padding: 205.8px 0 0 97.5px; background: var(--color-primary); color: var(--color-white); border-radius: 130px 40px 150px 40px; text-align: center;
+}
+@media (min-width: 1200px) { .visa-stats { margin-left: calc(50% - 576px); } }
+.visa-stats__item { display: flex; flex-direction: column; align-items: center; }
+.visa-stats__num { font: 900 75px/75px var(--font-body); color: var(--color-highlight); }
+.visa-stats__num span { color: var(--color-white); }
+.visa-stats__label { margin-top: 14px; font: 500 17px/30px var(--font-body); letter-spacing: -.2px; transform: translateX(11.5px); }
+.visa-stats__item--b .visa-stats__label { transform: translateX(15.5px); }
+.visa-stats__passport, .visa-stats__plane { position: absolute; max-width: none; pointer-events: none; }
+.visa-stats__passport { left: 214px; top: -88px; width: 273px; height: 307px; object-fit: cover; filter: drop-shadow(-50px 30px 40px rgb(0 0 0 / .35)); }
+.visa-stats__plane { left: 568px; top: -106px; width: 499px; height: 353px; object-fit: cover; filter: drop-shadow(-30px 8px 40px rgb(0 0 0 / .4)); }
+
+/* Servicio integral */
+.visa-svc { display: grid; grid-template-columns: 657px 532px; width: min(1189px, 100% - 48px); margin: 141px auto 0; align-items: start; }
+@media (min-width: 1200px) { .visa-svc { margin-left: calc(50% - 565px); } }
+.visa-svc__title { width: 760px; max-width: none; line-height: 70px; white-space: nowrap; }
+.visa-svc__list { margin-top: 34px; width: 438px; max-width: 100%; }
+.visa-svc__list li { padding-left: 42px; font-weight: 700; }
+.visa-svc__btn { margin-top: 45px; }
+.visa-svc__photo { margin-top: 191px; aspect-ratio: 532 / 504; }
+
+/* Tipos de visa */
+.visa-types { position: relative; width: min(1147px, 100% - 32px); margin-top: 199px; padding-bottom: 124px; }
+@media (min-width: 1200px) { .visa-types { margin-left: calc(50% - 573px); } }
+.visa-types__panel {
+  position: relative; display: grid; grid-template-columns: 353px 316px minmax(0, 1fr); grid-template-rows: 317.3px auto; min-height: 692px; padding: 88.4px 0 0 123px;
+  background: var(--color-primary); color: var(--color-white); border-radius: 130px 40px 150px 40px;
+}
+.visa-types__tag {
+  position: absolute; z-index: 1; right: -18px; top: -46px; display: grid; place-items: center; width: 414px; height: 96px; margin: 0;
+  background: var(--color-accent); color: var(--color-white); border-radius: 25px; font: 700 40px/60px var(--font-body);
+}
+.visa-type { position: relative; min-width: 0; }
+.visa-type::before { content: ""; position: absolute; left: -31px; top: 11.6px; width: 15px; height: 15px; background: url("../assets/icons/bullet-flecha.svg") center / contain no-repeat; }
+.visa-type h3 { margin: 0; width: 310px; max-width: none; font: 900 27px/35px var(--font-body); }
+.visa-type p { width: 257px; margin: 13.2px 0 0; font: 500 15px/35px var(--font-body); letter-spacing: -.2px; }
+.visa-type:nth-child(1) p { width: 283px; }
+.visa-type:nth-child(4) p { width: 229px; }
+.visa-type--esta h3 { width: 389px; }
+.visa-type--esta p { margin-top: 11px; }
+.visa-types__passport {
+  position: absolute; left: 783.9px; top: 295.1px; width: 474.3px; height: 533.8px; max-width: none; object-fit: cover; pointer-events: none;
+  transform: rotate(-14.4deg); filter: drop-shadow(-50px 30px 40px rgb(0 0 0 / .35));
+}
+.visa-types__btn { display: flex; width: 308px; margin: 69px auto 0; position: relative; }
+@media (min-width: 1200px) { .visa-types__btn { margin-left: calc(50% - 149px); } }
+
+/* Anillo decorativo rojo (arriba a la derecha de "Nuestro servicio") */
+.ring--visa { width: 683.246px; height: 688.194px; top: 1656px; left: calc(50% + 308.1px); transform: rotate(-44.13deg); }
+
+@media (max-width: 1199px) {
+  .visa-stats { margin-inline: auto; grid-template-columns: 1fr 1fr; padding-left: 0; }
+  .visa-svc { grid-template-columns: minmax(0, 1fr) minmax(0, 420px); column-gap: 32px; }
+  .visa-svc__title { width: auto; white-space: normal; }
+  .visa-types { margin-inline: auto; }
+  .visa-types__panel { grid-template-columns: 1fr 1fr 1fr; padding-left: 80px; padding-right: 24px; }
+  .visa-types__passport { left: auto; right: -140px; width: 380px; height: 428px; top: 380px; }
+  .visa-type h3, .visa-type--esta h3 { width: auto; }
+  .visa-type p, .visa-type:nth-child(n) p { width: auto; max-width: 257px; }
+}
+@media (max-width: 960px) {
+  .visa-stats { height: auto; min-height: 404px; grid-template-columns: 1fr; row-gap: 24px; padding: 220px 24px 48px; border-radius: 90px 28px 100px 28px; margin-top: 150px; }
+  .visa-stats__label, .visa-stats__item--b .visa-stats__label { transform: none; }
+  .visa-stats__passport { left: 50%; top: -90px; margin-left: -230px; width: 200px; height: 225px; }
+  .visa-stats__plane { left: 50%; top: -100px; margin-left: -20px; width: 300px; height: 212px; }
+  .visa-stats__num { font-size: 56px; line-height: 1.1; }
+  .visa-svc { grid-template-columns: 1fr; margin-top: 80px; }
+  .visa-svc__title { width: auto; font-size: 30px; line-height: 1.3; white-space: normal; }
+  .visa-svc__list { width: auto; }
+  .visa-svc__photo { margin-top: 40px; }
+  .photo-shape { border-radius: 56px 28px 90px 28px; }
+  .visa-types { margin-top: 120px; padding-bottom: 72px; }
+  .visa-types__panel { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 32px; min-height: 0; padding: 88px 24px 40px 56px; border-radius: 80px 24px 90px 24px; }
+  .visa-types__tag { right: 0; top: -40px; width: 260px; height: 80px; font-size: 28px; }
+  .visa-type h3 { font-size: 22px; line-height: 1.3; }
+  .visa-type::before { top: 6px; }
+  .visa-types__passport { position: relative; left: auto; right: auto; top: auto; display: block; width: 260px; height: auto; margin: 0 auto -80px; }
+  .visa-types__btn { margin-top: 110px; }
+  .ring--visa { opacity: .5; top: 1300px; }
+}
+@media (max-width: 560px) {
+  .visa-stats__passport { left: 8px; margin-left: 0; top: -70px; width: 140px; height: 158px; }
+  .visa-stats__plane { left: auto; right: 4px; margin-left: 0; top: -60px; width: 210px; height: 149px; }
+  .visa-types__btn { width: 100%; min-width: 0; padding: 12px 16px; font-size: 12px; }
+  .ring--visa { left: 30%; }
+}
