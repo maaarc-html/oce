@@ -47,7 +47,7 @@
     <section class="hero">
       <h1 class="hero__title">Estudiá, viajá y trabajá</h1>
       <p class="hero__lead">Tu próximo destino empieza con una decisión. Nosotros te acompañamos en todo el proceso.</p>
-      <div class="hero__photo"><img src="assets/img/hero-eventos.png" alt="Estudiantes en un evento de OCE"></div>
+      <div class="hero__photo"><img src="assets/img/hero-eventos.jpg" alt="Estudiantes en un evento de OCE"></div>
       <div class="hero__curve" aria-hidden="true"><img src="assets/icons/hero-curva.svg" alt=""></div>
       <a class="hero__scroll arrow-btn" href="#objetivo" aria-label="Ver más"><img src="assets/icons/flecha-circulo.svg" alt=""></a>
       <p class="hero__tagline">Experiencias internacionales diseñadas para conectar tu presente con <strong>nuevas oportunidades.</strong></p>
@@ -78,31 +78,41 @@
     </section>
 
     <section class="why" aria-labelledby="why-title">
-      <h2 class="why__title visually-hidden" id="why-title">Por qué elegir OCE</h2>
+      <h2 class="why__title" id="why-title">¿Por qué elegir OCE como tu conexión al mundo?</h2>
       <ul class="why__grid">
-        <li><img src="assets/icons/experiencia.svg" alt=""><h3>Experiencia:</h3><p>Desde el 2020 conectando a paraguayos con experiencias internacionales.</p></li>
-        <li><img src="assets/icons/acompanamiento.svg" alt=""><h3>Acompañamiento:</h3><p>Te guiamos antes, durante y después de tu experiencia.</p></li>
-        <li><img src="assets/icons/alianzas.svg" alt=""><h3>Alianzas globales:</h3><p>Trabajamos alianzas nacionales e internacionales confiables.</p></li>
-        <li><img src="assets/icons/resultados.svg" alt=""><h3>Resultados reales:</h3><p>Experiencias que respaldan nuestro trabajo.</p></li>
+        <li><span class="why__icon"><img src="assets/icons/experiencia.svg" alt=""></span><h3>Experiencia:</h3><p>Desde el 2020 conectando a paraguayos con experiencias internacionales.</p></li>
+        <li><span class="why__icon"><img src="assets/icons/acompanamiento.svg" alt=""></span><h3>Acompañamiento:</h3><p>Te guiamos antes, durante y después de tu experiencia.</p></li>
+        <li><span class="why__icon"><img src="assets/icons/alianzas.svg" alt=""></span><h3>Alianzas globales:</h3><p>Trabajamos alianzas nacionales e internacionales confiables.</p></li>
+        <li><span class="why__icon"><img src="assets/icons/resultados.svg" alt=""></span><h3>Resultados reales:</h3><p>Experiencias que respaldan nuestro trabajo.</p></li>
       </ul>
     </section>
 
     <section class="testimonial" aria-label="Testimonio">
-      <img class="testimonial__photo" src="assets/img/testimonio-sady.png" alt="Sady Azucena Cabrera en recepción del Hotel Samba">
-      <div>
+      <button class="testimonial__nav testimonial__nav--prev" type="button" aria-label="Testimonio anterior"><img src="assets/icons/carrusel-flecha.svg" alt=""></button>
+      <div class="testimonial__stage">
+        <img class="testimonial__photo" src="assets/img/testimonio-sady.jpg" alt="Sady Azucena Cabrera en recepción del Hotel Samba">
         <blockquote class="testimonial__bubble">
           En Work Spain tuve la oportunidad de conocer personas de muchos países, adaptarme a una nueva cultura y viajar por Europa. Como estudiante de Hotelería y Turismo, la experiencia también me ayudó a crecer profesionalmente y a conocer de cerca el trabajo en el área.
         </blockquote>
+        <span class="testimonial__quote testimonial__quote--open" aria-hidden="true">“</span>
+        <span class="testimonial__quote testimonial__quote--close" aria-hidden="true">“</span>
         <p class="testimonial__author"><strong>Sady Azucena Cabrera</strong>Hotel Samba<br>📍Lloret Del Mar, Girona, España</p>
+        <div class="testimonial__social">
+          <a href="#" aria-label="TikTok de Sady"><img src="assets/icons/tiktok-rojo.svg" alt=""></a>
+          <a href="#" aria-label="Instagram de Sady"><img src="assets/icons/instagram-rojo.svg" alt=""></a>
+        </div>
       </div>
+      <button class="testimonial__nav testimonial__nav--next" type="button" aria-label="Testimonio siguiente"><img src="assets/icons/carrusel-flecha.svg" alt=""></button>
     </section>
 
     <section class="gallery" aria-label="Galería de experiencias">
-      <img src="assets/img/galeria-1.png" alt="" loading="lazy">
-      <img src="assets/img/galeria-2.png" alt="" loading="lazy">
-      <img src="assets/img/galeria-3.png" alt="" loading="lazy">
-      <img src="assets/img/galeria-4.png" alt="" loading="lazy">
-      <img src="assets/img/galeria-5.png" alt="" loading="lazy">
+      <div class="gallery__strip">
+        <img src="assets/img/galeria-1.jpg" alt="" loading="lazy">
+        <img src="assets/img/galeria-2.jpg" alt="" loading="lazy">
+        <img src="assets/img/galeria-3.jpg" alt="" loading="lazy">
+        <img src="assets/img/galeria-4.jpg" alt="" loading="lazy">
+        <img src="assets/img/galeria-5.jpg" alt="" loading="lazy">
+      </div>
     </section>
   </main>
 

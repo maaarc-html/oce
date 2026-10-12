@@ -3,7 +3,7 @@
   --color-accent: #c42400;
   --color-text: #1e1e1e;
   --color-white: #fff;
-  --color-highlight: #ffd500; /* amarillo de íconos; confirmar valor exacto en Figma */
+  --color-highlight: #F6D017; /* amarillo de íconos, verificado en Figma */
 
   --font-body: "Montserrat", system-ui, sans-serif;
   --font-nav: "Gotham", "Montserrat", system-ui, sans-serif;
