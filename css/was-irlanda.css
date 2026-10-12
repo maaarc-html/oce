@@ -1,0 +1,126 @@
+/* Work & Study Irlanda — medidas del frame "WAS Irlanda" (1440 px)
+   Paleta de la página: naranja #fb7202 y verde #008441 (los componentes de paginas.css se recolorean acá). */
+.page { --irl-orange: #fb7202; --irl-green: #008441; }
+.page { overflow: clip; } /* los anillos no deben invadir el footer */
+.br-desktop { display: inline; }
+
+/* Hero: foto de Dublín, logotipo "Work and Study Ireland" en lugar del h1 de texto */
+@media (min-width: 721px) {
+  .irl-hero.hero--page .hero__photo { top: calc(var(--k) * -46); left: calc(var(--k) * -91); width: calc(100% + var(--k) * 435); height: calc(var(--k) * 1136); }
+  .irl-hero.hero--page .hero__photo::after { background: linear-gradient(106.87deg, rgb(30 30 30 / .7) 20.7%, rgb(30 30 30 / 0) 61.5%); }
+  .irl-hero.hero--page .hero__title { left: calc(var(--k) * 145); top: calc(var(--k) * 245); width: calc(var(--k) * 324); }
+  .irl-hero.hero--page .hero__lead { left: calc(var(--k) * 151); top: calc(var(--k) * 447); width: calc(var(--k) * 427); text-shadow: 0 10px 50px rgb(0 0 0 / .5); }
+  .irl-hero.hero--page .hero__tagline { width: min(984px, 100% - 48px); }
+}
+@media (min-width: 721px) and (max-width: 1100px) {
+  .irl-hero.hero--page .hero__lead { width: calc(var(--k) * 520); font-size: 15px; line-height: 1.7; }
+}
+/* Hero en móvil: logotipo más chico y foto que llega hasta la flecha */
+@media (max-width: 720px) {
+  .irl-hero.hero--page .hero__title { width: min(260px, 70%); }
+  .irl-hero.hero--page .hero__photo { inset: 0 0 220px 0; width: 100%; height: auto; }
+  .irl-hero.hero--page .hero__scroll { margin-top: 56px; }
+  .irl-hero.hero--page .hero__tagline { margin-top: 48px; }
+}
+.irl-hero .hero__title img { display: block; width: 100%; height: auto; }
+.irl-hero .hero__tagline strong { color: var(--irl-green); }
+
+/* Botón verde */
+.btn--green { background: var(--irl-green); }
+
+/* Títulos de la página */
+.h-title--lh75 { line-height: 75px; }
+.h-title--green { color: var(--irl-green); }
+
+/* Intro: foto + fechas / título + destinos */
+.irl-intro { display: grid; grid-template-columns: minmax(0, 532fr) minmax(0, 491fr); column-gap: calc(121 / 1144 * 100%); width: min(1144px, 100% - 48px); margin: 58px auto 0; align-items: start; }
+.irl-intro__photo { border-radius: 150px 40px 80px 40px; margin-top: 37px; aspect-ratio: 532 / 504; }
+.irl-fechas__title { margin-top: 230px; color: var(--irl-orange); }
+.irl-fechas__text { margin: -7px 0 0 2px; max-width: 530px; }
+.irl-intro__title { margin: 0; font: 800 60px/75px var(--font-body); color: var(--irl-orange); text-transform: uppercase; white-space: nowrap; }
+.irl-intro__text { margin: 8px 0 0 4px; max-width: 477px; font: 500 17px/40px var(--font-body); letter-spacing: -.2px; }
+.irl-destinos { width: min(463px, 100%); min-height: 747px; margin: 42px 0 0 4px; padding: 67px 40px 40px 64px; background: var(--irl-green); box-sizing: border-box; }
+.irl-destinos h3 { margin: 0 0 -1px; max-width: 317px; font: 900 35px/45px var(--font-body); color: #f58534; }
+.irl-destinos p { margin: 37px 0 0; max-width: 335px; font: 600 17px/37px var(--font-body); letter-spacing: -.2px; }
+.irl-destinos h3 + p { margin-top: 0; }
+.irl-destinos strong { font-weight: 900; }
+
+/* Permiso / búsqueda / opciones (panel naranja) */
+.panel.irl-info {
+  display: grid; grid-template-columns: 342px 368px minmax(0, 1fr); align-items: start;
+  width: min(1133px, 100% - 32px); min-height: 444px; margin: 202px auto 0; padding: 105px 40px 40px 83px; box-sizing: border-box; background: var(--irl-orange);
+}
+.irl-info h2 { margin: 0; max-width: 254px; font: 800 40px/45px var(--font-body); }
+.irl-info p { margin: 20.5px 0 0; max-width: 308px; font: 600 17px/40px var(--font-body); letter-spacing: -.2px; }
+.irl-info__col:nth-child(1) p { max-width: 273px; }
+.irl-info__col:nth-child(3) p { max-width: 303px; }
+.irl-info__btn { position: relative; display: flex; width: 308px; margin: -24px auto 0; }
+
+/* Qué incluye / qué NO incluye / requisitos */
+.irl-prog { display: grid; grid-template-columns: minmax(0, 573fr) minmax(0, 573fr); width: min(1146px, 100% - 48px); margin: 230px auto 116px; align-items: start; }
+.irl-prog__photo { margin-top: 25px; aspect-ratio: 573 / 487; }
+.irl-prog__title { margin-left: -2px; }
+.irl-prog__title--no { margin-top: 89px; }
+.irl-prog__title--req { margin-top: 53px; }
+.irl-prog__title2 { margin-left: 108px; }
+
+.irl-list { --ind: 33px; margin: 6px 0 0; padding: 0; list-style: none; }
+.irl-list li { position: relative; padding-left: var(--ind); font: 500 17px/35px var(--font-body); letter-spacing: -.2px; }
+.irl-list li::before { content: ""; position: absolute; left: 0; top: 8px; width: 19px; height: 19px; background: url("../assets/icons/was-irlanda-bullet.svg") center / contain no-repeat; }
+.irl-list--no { --ind: 39px; width: 479px; max-width: 100%; margin-left: 2px; }
+.irl-list--req { --ind: 39px; width: 435px; max-width: 100%; margin-left: 2px; }
+.irl-list--inc { width: 439px; max-width: 100%; margin: 16px 0 0 115px; }
+
+.panel.irl-importante {
+  position: relative; z-index: 1; width: 458px; max-width: 100%; height: 387px; margin: 3px 0 0 202px; padding: 54px 24px 0 69px; box-sizing: border-box; background: var(--irl-orange);
+}
+.irl-importante h3 { margin: 0; font: 800 40px/45px var(--font-body); }
+.irl-importante p { margin: 5px 0 0; max-width: 343px; font: 600 17px/40px var(--font-body); letter-spacing: -.2px; }
+
+/* Foto de la catedral: en el diseño la máscara es 54 px más alta que la imagen (queda vacía arriba) */
+.irl-cat { border-radius: 150px 40px 80px 40px; width: 532px; max-width: 100%; margin-top: -8px; aspect-ratio: 532 / 830; overflow: hidden; }
+.irl-cat img { display: block; width: 100%; height: auto; margin-top: 10.19%; }
+.irl-prog__btn { position: relative; display: flex; width: 386px; max-width: 100%; margin: -29px 0 0 111px; }
+
+/* Anillos decorativos del fondo */
+.ring--a { width: 739.041px; height: 739.041px; left: calc(50% + 246.5px); top: 1995px; transform: rotate(-17.05deg); }
+.ring--b { width: 705.116px; height: 705.116px; left: calc(50% - 875.5px); top: 4683.5px; transform: rotate(-48.52deg); }
+
+@media (max-width: 1240px) {
+  .irl-intro__title { font-size: clamp(36px, 5vw, 60px); line-height: 1.25; }
+}
+@media (max-width: 960px) {
+  .br-desktop { display: none; }
+  .irl-intro, .irl-prog { grid-template-columns: minmax(0, 1fr); row-gap: 32px; }
+  .irl-intro { margin-top: 40px; }
+  .irl-intro__left { display: flex; flex-direction: column; order: 2; }
+  .irl-intro__right { order: 1; }
+  .irl-intro__photo { margin-top: 0; }
+  .irl-fechas__title { margin-top: 40px; }
+  .irl-intro__title { white-space: normal; }
+  .irl-intro__text, .irl-destinos { margin-left: 0; }
+  .irl-destinos { margin-top: 32px; min-height: 0; padding: 48px 28px; border-radius: 80px 24px 90px 24px; }
+  .panel.irl-info { grid-template-columns: minmax(0, 1fr); row-gap: 28px; margin-top: 64px; min-height: 0; padding: 56px 28px 64px; border-radius: 80px 24px 90px 24px; }
+  .irl-info h2 { font-size: 32px; line-height: 1.2; }
+  .irl-info p, .irl-info__col:nth-child(n) p { max-width: none; }
+  .irl-prog { margin-top: 96px; margin-bottom: 72px; }
+  .irl-prog__photo { margin-top: 0; }
+  .irl-prog__title--no { margin-top: 40px; }
+  .irl-prog__title--req { margin-top: 32px; }
+  .irl-prog__title, .irl-prog__title2 { margin-left: 0; font-size: 34px; line-height: 1.3; }
+  .irl-list--no, .irl-list--req, .irl-list--inc { width: auto; margin-left: 0; }
+  .irl-list--inc { margin-top: 12px; }
+  .panel.irl-importante { width: auto; height: auto; margin: 32px 0 0; padding: 48px 28px; border-radius: 80px 24px 90px 24px; }
+  .irl-cat { width: 100%; max-width: 560px; margin: 24px auto 0; }
+  .irl-prog__btn { margin: 0 auto; }
+  .photo-shape, .irl-cat, .irl-intro__photo { border-radius: 56px 28px 90px 28px; }
+  .h-title { font-size: 34px; line-height: 1.3; }
+  .ring--a, .ring--b { opacity: .5; }
+}
+@media (max-width: 560px) {
+  .irl-intro__title { font-size: 34px; }
+  .irl-info__btn, .irl-prog__btn { width: min(386px, 100% - 32px); }
+  .irl-prog__btn { margin: -24px auto 0; }
+  .ring--a { left: 40%; }
+  .ring--b { left: -60%; }
+}
