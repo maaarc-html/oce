@@ -1,0 +1,108 @@
+/* WAT Croacia — medidas del frame "WAT Croacia" (1440 px) */
+
+.cro-intro strong, .cro-how strong, .cro-req strong { font-weight: 800; }
+.cro-how strong.w9 { font-weight: 900; }
+
+/* Encabezado: foto de Split con degradé más largo, logo "Work Croatia" y texto de apoyo */
+@media (min-width: 721px) {
+  .hero--wat .hero__photo { top: calc(var(--k) * -99); left: calc(var(--k) * -107); width: calc(100% + var(--k) * 182); height: calc(var(--k) * 1236); }
+  .hero--wat .hero__photo::after { background: linear-gradient(103.56deg, rgb(30 30 30 / .8) 14.2%, rgb(30 30 30 / 0) 60.1%); }
+  .hero--wat .hero__title { left: calc(var(--k) * 103); top: calc(var(--k) * 183); width: calc(var(--k) * 610); }
+  .hero--wat .hero__lead {
+    left: calc(var(--k) * 155); top: calc(var(--k) * 467); width: calc(var(--k) * 377);
+    font-size: clamp(12px, calc(var(--k) * 17), 17px); line-height: 2.353;
+  }
+}
+.hero--wat .hero__title { line-height: 0; }
+.hero--wat .hero__title img { width: 100%; height: auto; }
+.hero--wat .hero__tagline strong { color: inherit; text-decoration: underline; }
+@media (max-width: 720px) {
+  .hero--wat .hero__title { width: min(340px, 100%); }
+  .hero--wat .hero__lead { font-size: 16px; line-height: 1.8; }
+}
+
+/* Qué es el programa + requisitos */
+.cro-intro {
+  position: relative; display: grid; grid-template-columns: 573px minmax(0, 1fr); column-gap: 49px;
+  width: min(1154px, 100% - 48px); margin: 97px auto 0;
+}
+.cro-intro__photo { aspect-ratio: 573 / 487; }
+.cro-intro__req-title { margin: 89px 0 0 7px; font: 800 45px/60px var(--font-body); color: var(--color-primary); }
+.cro-req { margin: 12px 0 0 7px; max-width: 517px; }
+.cro-req li { padding-left: 34px; }
+.cro-req li::before { top: 8px; }
+.cro-intro__title { margin: 0; padding-left: 13px; font: 800 64px/75px var(--font-body); color: var(--color-accent); text-transform: uppercase; }
+.cro-intro__text { max-width: 497px; min-height: 422px; margin: 13px 0 0; padding-left: 20px; font: 500 17px/40px var(--font-body); letter-spacing: -.2px; }
+.cro-intro__photo2 { aspect-ratio: 532 / 504; }
+.ring--a { width: 523.678px; height: 523.678px; left: 1015.4px; top: 326.7px; transform: rotate(14.74deg); }
+
+/* Cómo funciona (panel azul sobre foto de fondo) */
+.cro-how-wrap { position: relative; margin-top: -51px; }
+.cro-band { position: absolute; z-index: 0; left: 0; right: 0; top: 231px; height: 1060px; overflow: hidden; }
+.cro-band img { position: absolute; left: calc(50% - 731px); top: 0; width: 1588px; max-width: none; height: 1060px; object-fit: cover; }
+.cro-how { position: relative; z-index: 1; width: min(594px, 100% - 48px); height: 860px; margin: 0 auto; padding: 104px 90px 0; }
+.cro-how h2 { margin: 0; white-space: nowrap; font: 900 25px/75px var(--font-body); }
+.cro-how__list { margin: -6px 0 0; padding: 0; list-style: none; }
+.cro-how__list li { position: relative; max-width: 414px; padding-left: 26px; font: 500 15px/35px var(--font-body); letter-spacing: -.2px; }
+.cro-how__list li + li { margin-top: 35px; }
+.cro-how__list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 15px; height: 15px; background: url("../assets/icons/bullet-flecha.svg") center / contain no-repeat; }
+.cro-how__btn { position: relative; z-index: 2; display: flex; width: 308px; margin: -29px auto 0; }
+@media (min-width: 1240px) {
+  .cro-how { margin-left: calc(50% - 572px); }
+  .cro-how__btn { margin-left: calc(50% - 437px); }
+  .cro-intro { margin-left: calc(50% - 572px); }
+}
+
+/* El programa incluye / no incluye */
+.cro-incl { position: relative; display: grid; grid-template-columns: 585px minmax(0, 1fr); width: min(1158px, 100% - 48px); margin: 300px auto 0; }
+.cro-incl__text { padding-top: 168px; }
+.cro-incl__title { margin: 0; padding-left: 11px; font: 800 45px/75px var(--font-body); color: var(--color-primary); }
+.cro-incl__title--no { margin-top: 63px; line-height: 60px; }
+.cro-list { max-width: 430px; margin-left: 11px; }
+.cro-list--1 { margin-top: 2px; }
+.cro-list--1 li { padding-left: 40px; }
+.cro-list--2 { margin-top: 3px; }
+.cro-list--2 li { padding-left: 38px; max-width: 380px; }
+.cro-incl__photo { position: relative; z-index: 1; width: 573px; max-width: 100%; aspect-ratio: 573 / 690; }
+.cro-incl__red {
+  position: absolute; z-index: 0; left: 448px; top: 509px; width: 340px; height: 311px;
+  border-radius: 110px 30px 120px 25px; background: var(--color-accent);
+}
+.cro-incl__rings { position: absolute; z-index: -1; left: 50%; top: 18px; width: 100vw; height: 1115px; translate: -50% 0; overflow: hidden; pointer-events: none; }
+.ring--b { width: 582px; height: 582px; left: calc(50% - 962.2px); top: 842.8px; transform: rotate(-74.88deg); }
+.cro-incl__rings .ring { z-index: auto; }
+.cro-wa { display: flex; width: 317px; margin: 172px auto 119px; }
+@media (min-width: 1240px) { .cro-incl { margin-left: calc(50% - 572px); } }
+
+@media (max-width: 1240px) {
+  .cro-intro { grid-template-columns: 573fr 532fr; column-gap: 4%; }
+  .cro-incl { grid-template-columns: 585fr 573fr; }
+  .cro-incl__red { left: 38%; width: 29%; }
+}
+@media (max-width: 960px) {
+  .cro-intro { grid-template-columns: 1fr; row-gap: 40px; margin-top: 56px; }
+  .cro-intro__req-title { margin-top: 40px; font-size: 34px; line-height: 1.3; }
+  .cro-intro__title { padding-left: 0; font-size: 44px; line-height: 1.2; }
+  .cro-intro__text { min-height: 0; max-width: none; padding-left: 0; margin-bottom: 32px; }
+  .photo-shape { border-radius: 56px 28px 90px 28px; }
+  .cro-how-wrap { margin-top: 48px; }
+  .cro-band { position: relative; top: auto; height: 300px; margin-top: 32px; order: 3; }
+  .cro-how-wrap { display: flex; flex-direction: column; }
+  .cro-how { height: auto; padding: 56px 28px 56px; border-radius: 80px 24px 90px 24px; order: 1; }
+  .cro-how__btn { order: 2; }
+  .cro-incl { grid-template-columns: 1fr; margin-top: 56px; }
+  .cro-incl__text { padding-top: 0; }
+  .cro-incl__title { padding-left: 0; font-size: 34px; line-height: 1.3; }
+  .cro-incl__title--no { margin-top: 32px; }
+  .cro-list { margin-left: 0; }
+  .cro-incl__photo { margin-top: 40px; justify-self: center; }
+  .cro-incl__red { display: none; }
+  .cro-wa { margin-top: 56px; margin-bottom: 72px; max-width: calc(100% - 32px); }
+  .ring--a, .ring--b { opacity: .5; }
+  .ring--a { left: auto; right: -260px; top: 280px; width: 360px; height: 360px; }
+  .ring--b { width: 380px; height: 380px; top: auto; bottom: -140px; left: -200px; }
+}
+@media (max-width: 560px) {
+  .cro-how h2 { white-space: normal; font-size: 22px; line-height: 1.4; }
+  .cro-how__list li { padding-left: 24px; }
+}
