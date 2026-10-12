@@ -1,0 +1,152 @@
+/* Work & Travel Asia — medidas del frame "Programas de trabajo ASIA" (1440 px) */
+
+.page { --asia-claro: #78abdd; }
+.asia-dur strong, .asia-prog strong { font-weight: 800; }
+.asia-dur strong.w9 { font-weight: 900; }
+.asia-ring { pointer-events: none; }
+
+/* Encabezado: foto de templo, título con sombra y texto de apoyo más ancho */
+@media (min-width: 721px) {
+  .hero--asia { background: var(--asia-claro); }
+  .hero--asia .hero__photo { top: calc(var(--k) * -321); left: calc(var(--k) * -70); width: calc(100% + var(--k) * 337); height: calc(var(--k) * 1333); }
+  .hero--asia .hero__photo::after { background: linear-gradient(103.76deg, rgb(30 30 30 / .8) 14.2%, rgb(30 30 30 / 0) 40.6%); }
+  .hero--asia .hero__title { left: calc(var(--k) * 161); top: calc(var(--k) * 283); width: calc(var(--k) * 515); text-shadow: 0 4px 200px #000; }
+  .hero--asia .hero__curve { top: calc(var(--k) * 780.65); }
+  .hero--asia .hero__scroll { top: calc(var(--k) * 769); }
+  .hero--asia .hero__tagline { top: calc(var(--k) * 914); width: min(1050px, 100% - 48px); font-size: clamp(15px, calc(var(--k) * 20), 20px); line-height: 2; }
+}
+.hero--asia .hero__title { text-transform: uppercase; }
+@media (max-width: 720px) {
+  .hero--asia .hero__photo { height: 380px; }
+  .hero--asia .hero__scroll { margin-top: 190px; }
+  .hero--asia .hero__tagline { font-size: 17px; line-height: 1.8; }
+}
+.hero--asia .hero__tagline strong { color: inherit; }
+
+/* Duración del programa */
+.asia-dur { position: relative; z-index: 2; width: min(1133px, 100% - 32px); height: 428px; margin: -38px auto 0; padding-top: 51px; }
+.asia-dur h2 { margin: 0; text-align: center; font: 800 40px/75px var(--font-body); color: var(--asia-claro); }
+.asia-dur__grid { display: grid; grid-template-columns: 362px 326px 303px; margin: 24px 0 0 93px; }
+.asia-dur__grid > * { padding-right: 39px; }
+.asia-dur__grid > :nth-child(2) { padding-right: 23px; }
+.asia-dur__grid > :nth-child(3) { padding-right: 0; }
+.asia-dur p { margin: 0; font: 500 17px/40px var(--font-body); letter-spacing: -.2px; }
+.asia-dur .asia-dur__h { font-weight: 800; }
+.asia-btn { position: relative; z-index: 2; display: flex; width: 308px; margin: -29px auto 0; background: var(--asia-claro); color: var(--color-primary); }
+
+/* Los tres programas */
+.asia-prog {
+  position: relative; display: grid; grid-template-columns: 514px minmax(0, 532px); column-gap: 102px;
+  width: min(1148px, 100% - 48px); margin: 147px auto 0; padding-bottom: 32px;
+}
+.asia-prog__photo { aspect-ratio: 514 / 757; }
+.asia-h { margin: 0; font: 800 45px/75px var(--font-body); color: var(--color-primary); }
+.asia-h--paises { margin-top: 183px; }
+.asia-paises { margin: 8px 0 0; padding: 0; list-style: none; }
+.asia-paises li { position: relative; padding-left: 44px; font: 500 17px/35px var(--font-body); letter-spacing: -.2px; }
+.asia-paises li::before { content: ""; position: absolute; left: 3px; top: 10px; width: 16.4px; height: 16.4px; background: url("../assets/icons/asia-bullet-flecha.svg") center / contain no-repeat; }
+.asia-prog__title { min-height: 245px; margin: 0; padding-left: 26px; font: 800 40px/43px var(--font-body); color: var(--color-primary); }
+.asia-progs { min-height: 637px; margin: 0; padding: 0 0 0 75px; list-style: none; }
+.asia-progs li { position: relative; max-width: 412px; font: 500 17px/40px var(--font-body); letter-spacing: -.2px; }
+.asia-progs li + li { margin-top: 40px; }
+.asia-progs li::before { content: ""; position: absolute; left: -46px; top: 10px; width: 21px; height: 21px; background: url("../assets/icons/asia-bullet-flecha.svg") center / contain no-repeat; }
+.asia-pic { position: relative; }
+.asia-pic > .photo-shape { aspect-ratio: 532 / 642; }
+.asia-pic__cut { position: absolute; height: auto; max-width: none; pointer-events: none; }
+.asia-pic--bali .asia-pic__cut { left: 9.774%; top: -23.52%; width: 74.21%; }
+.asia-templo {
+  position: relative; z-index: 1; grid-column: 1 / -1; width: 47.74%; max-width: 548px; aspect-ratio: 548 / 366; margin: -22.9% 0 0 19.16%;
+  border: 10px solid var(--color-white); border-radius: 40px 117px 40px 83px;
+}
+.asia-templo img { width: 100%; height: 100%; object-fit: cover; border-radius: 40px 117px 40px 83px; }
+.asia-ring--prog { z-index: 2; width: 595px; height: 595px; left: 994px; top: 671px; transform: rotate(-162.39deg); }
+
+/* Requisitos por programa */
+.asia-req { width: min(1147px, 100% - 32px); height: 954px; margin: 28px auto 0; padding-top: 82px; }
+.asia-req__grid { display: grid; grid-template-columns: 318px 372px 304px; margin-left: 115px; }
+.asia-req__h { max-width: 304px; min-height: 108px; margin: 0; font: 900 27px/30px var(--font-body); }
+.asia-req__h--upper { text-transform: uppercase; }
+.asia-req ul { margin: 0 0 0 -24px; padding-left: 24px; }
+.asia-req li { font: 500 16px/37px var(--font-body); letter-spacing: -.2px; }
+.asia-req li + li { margin-top: 37px; }
+.asia-req__col--1 ul { width: 235px; }
+.asia-req__col--2 ul { width: 266px; }
+.asia-req__col--3 ul { width: 274px; margin-left: -21px; }
+
+/* Qué incluye cada programa y trabajos disponibles */
+.asia-inc {
+  position: relative; display: grid; grid-template-columns: 573px minmax(0, 520px); column-gap: 61px;
+  width: min(1154px, 100% - 48px); margin: 161px auto 0; padding-bottom: 159px;
+}
+.asia-inc__photo { aspect-ratio: 573 / 487; }
+.asia-h--inc { margin-top: 98px; color: var(--asia-claro); }
+.asia-h--jobs { font-size: 45px; line-height: 65px; color: var(--asia-claro); }
+.asia-inc__lists { display: grid; grid-template-columns: 263px 241px; column-gap: 68px; margin-top: 8px; }
+.asia-inc__lists ul { margin: 0; padding: 0 0 0 37px; list-style: none; }
+.asia-inc__lists ul + ul { padding-left: 32px; }
+.asia-inc__lists li, .asia-jobs li { position: relative; font: 500 17px/35px var(--font-body); letter-spacing: -.2px; }
+.asia-inc__lists li + li { margin-top: 35px; }
+.asia-inc__lists li::before, .asia-jobs li::before {
+  content: ""; position: absolute; left: -37px; top: 8px; width: 21px; height: 21px; background: url("../assets/icons/asia-bullet-flecha.svg") center / contain no-repeat;
+}
+.asia-inc__lists ul + ul li::before { left: -32px; }
+.asia-inc__right { display: flex; flex-direction: column; }
+.asia-inc__top { min-height: 592px; margin-top: -7px; padding-left: 24px; }
+.asia-jobs { display: flex; margin: 52px 0 0 25px; padding: 0; list-style: none; }
+.asia-jobs li { width: 229px; padding-left: 36px; margin-right: 35px; }
+.asia-jobs li + li { width: 213px; padding-left: 32px; margin-right: 0; }
+.asia-jobs li::before { left: 0; top: 9px; }
+.asia-pic--pagodas .asia-pic__cut { left: 13.46%; top: -35.89%; width: 78.27%; }
+.asia-pic--pagodas > .photo-shape { aspect-ratio: 520 / 599; }
+.asia-btn--inc { margin-top: -27px; }
+.asia-inc__rings { position: absolute; z-index: -1; inset: 0; overflow: hidden; pointer-events: none; }
+.asia-ring--inc { width: 519.82px; height: 519.82px; left: 405.2px; top: 1007.3px; transform: rotate(159.01deg); z-index: auto; }
+
+@media (min-width: 1240px) {
+  .asia-dur { margin-left: calc(50% - 572px); }
+  .asia-btn { margin-left: calc(50% - 154px); }
+  .asia-prog { margin-left: calc(50% - 572px); }
+  .asia-req { margin-left: calc(50% - 572px); }
+  .asia-inc { margin-left: calc(50% - 572px); }
+}
+@media (max-width: 1240px) {
+  .asia-prog { grid-template-columns: 514fr 532fr; column-gap: 9%; }
+  .asia-inc { grid-template-columns: 573fr 520fr; column-gap: 5%; }
+}
+@media (max-width: 960px) {
+  .asia-dur { height: auto; margin-top: 0; padding: 44px 28px 48px; border-radius: 80px 24px 90px 24px; }
+  .asia-dur h2 { font-size: 30px; line-height: 1.3; }
+  .asia-dur__grid { grid-template-columns: 1fr; gap: 24px; margin-left: 0; }
+  .asia-dur__grid > * { padding-right: 0 !important; }
+  .asia-prog { grid-template-columns: 1fr; row-gap: 40px; margin-top: 72px; }
+  .asia-prog__title { min-height: 0; padding-left: 0; font-size: 30px; line-height: 1.3; }
+  .asia-progs { min-height: 0; padding-left: 46px; margin-top: 24px; }
+  .asia-progs li { max-width: none; }
+  .asia-h--paises { margin-top: 24px; }
+  .asia-h, .asia-h--jobs { font-size: 34px; line-height: 1.3; }
+  .asia-prog__right { display: flex; flex-direction: column; }
+  .asia-pic--bali { margin-top: 160px; }
+  .asia-templo { width: 100%; max-width: 520px; margin: 0 auto; }
+  .photo-shape { border-radius: 56px 28px 90px 28px; }
+  .asia-prog__photo, .asia-inc__photo, .asia-pic { width: 100%; max-width: 520px; justify-self: center; margin-inline: auto; }
+  .asia-prog__left, .asia-inc__left { display: flex; flex-direction: column; }
+  .asia-ring--prog { display: none; }
+  .asia-req { height: auto; padding: 56px 28px; border-radius: 80px 24px 90px 24px; }
+  .asia-req__grid { grid-template-columns: 1fr; margin-left: 0; row-gap: 40px; }
+  .asia-req__h { min-height: 0; max-width: none; margin-bottom: 16px; }
+  .asia-req ul, .asia-req__col--3 ul { width: auto; margin-left: 0; }
+  .asia-inc { grid-template-columns: 1fr; row-gap: 40px; margin-top: 72px; padding-bottom: 88px; }
+  .asia-h--inc { margin-top: 40px; }
+  .asia-inc__lists { grid-template-columns: 1fr; row-gap: 24px; }
+  .asia-inc__top { min-height: 0; margin-top: 0; padding-left: 0; }
+  .asia-jobs { flex-direction: column; margin-left: 0; gap: 12px; }
+  .asia-jobs li, .asia-jobs li + li { width: auto; margin-right: 0; padding-left: 36px; }
+  .asia-pic--pagodas { margin-top: 210px; }
+  .asia-btn--inc { margin-top: 24px; }
+  .asia-ring--inc { opacity: .5; }
+}
+@media (max-width: 560px) {
+  .asia-dur h2 { font-size: 26px; }
+  .asia-req__h { font-size: 22px; line-height: 1.3; }
+  .asia-btn { max-width: calc(100% - 32px); }
+}
