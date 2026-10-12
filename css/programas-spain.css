@@ -1,0 +1,118 @@
+/* Work Spain — medidas del frame "Programas de trabajo Spain" (1440 px) */
+
+.page--spain { overflow: clip; padding-bottom: 604px; }
+
+/* Hero: foto del diseño ya recortada y con el degradé oscuro incorporado; el título es el logo "Work Spain" en SVG */
+@media (min-width: 721px) {
+  .hero--spain .hero__photo { top: 0; left: 0; width: 100%; height: 100%; }
+  .hero--spain .hero__photo::after { background: none; }
+  .hero--spain .hero__title { top: calc(var(--k) * 261); width: calc(var(--k) * 333); line-height: 0; }
+  .hero--spain .hero__lead { width: calc(var(--k) * 379); }
+  .hero--spain .hero__tagline { width: min(984px, 100% - 48px); }
+}
+.hero--spain .hero__title img { width: 100%; height: auto; }
+@media (max-width: 720px) {
+  .hero--spain .hero__photo { height: 420px; }
+  .hero--spain .hero__title img { width: min(260px, 100%); }
+}
+
+/* Requisitos, puestos y fotos */
+.requisitos {
+  display: grid; grid-template-columns: 519px 617px; align-items: start;
+  width: min(1136px, 100% - 48px); margin: 0 auto 104px;
+}
+@media (min-width: 1200px) { .requisitos { margin-left: calc(50% - 575px); } }
+.requisitos__title { margin: 100px 0 0; font: 800 45px/75px var(--font-body); color: var(--color-accent); }
+.requisitos__list { margin: 18px 0 0 4px; padding: 0; list-style: none; }
+.requisitos__list li { position: relative; max-width: 531px; padding-left: 48px; font: 500 17px/35px var(--font-body); letter-spacing: -.2px; }
+.requisitos__list li::before { content: ""; position: absolute; left: 0; top: 9px; width: 21px; height: 21px; background: url("../assets/icons/programas-spain-bullet-amarillo.svg") center / contain no-repeat; }
+.requisitos__list li + li { margin-top: 35px; }
+.requisitos__title--puestos { margin-top: 113px; max-width: 471px; line-height: 65px; }
+.requisitos__puestos { display: grid; grid-template-columns: 278px 202px; margin-top: 14px; }
+.requisitos__puestos .dots { padding-left: 25.5px; max-width: 234px; }
+.requisitos__puestos .dots + .dots { max-width: 202px; }
+.requisitos__recepcion { width: 369px; height: 320px; margin-top: 107px; border-radius: 40px; object-fit: cover; }
+.requisitos__chef { position: relative; width: 520px; margin: 52px 0 0 97px; }
+.requisitos__chef-photo { aspect-ratio: 520 / 560; }
+/* Gorro y mano del chef: recorte que sobresale de la foto */
+.requisitos__gorro { position: absolute; z-index: 2; left: -41px; top: -332px; width: 670px; max-width: none; height: auto; pointer-events: none; }
+
+/* Panel rojo: fechas y qué incluye */
+.fechas { width: min(1147px, 100% - 48px); min-height: 461px; margin: 0 auto; padding: 97px 0 0 109px; background: var(--color-accent); display: grid; grid-template-columns: 498px minmax(0, 1fr); align-content: start; }
+@media (min-width: 1200px) { .fechas { margin-left: calc(50% - 586px); } }
+.fechas h2 { margin: 0; font: 900 27px/30px var(--font-body); color: var(--color-highlight); }
+.fechas__col p { margin: 0; max-width: 408px; font: 500 16px/37px var(--font-body); letter-spacing: -.2px; }
+.fechas__col h2 + p { margin-top: 20px; }
+.fechas__col--incluye h2 { margin-left: 8px; }
+.fechas__listas { display: grid; grid-template-columns: 235px 223px; margin-top: 15px; }
+.fechas__listas ul { margin: 0; padding: 0 0 0 24px; font: 500 16px/37px var(--font-body); letter-spacing: -.2px; }
+.fechas__listas li + li { margin-top: 37px; }
+
+/* Testimonio: capas de fotos y burbuja que se solapan (posiciones del diseño, relativas al bloque de 1147 px) */
+.testi { position: relative; width: min(1147px, 100% - 48px); height: 1045px; margin: 148px auto 0; }
+@media (min-width: 1200px) { .testi { margin-left: calc(50% - 586px); } }
+.testi__foto { position: absolute; max-width: none; object-fit: cover; }
+.testi__foto--a { z-index: 2; left: 0; top: 0; width: 347px; height: 463px; border-radius: 19px; }
+.testi__foto--b { z-index: 1; left: 210px; top: 260px; width: 446px; height: 666px; border-radius: 23px; }
+.testi__bubble {
+  position: absolute; z-index: 3; left: 600px; top: 8px; width: 547px; height: 473px; margin: 0; padding: 59px 64px 0 76px;
+  background: var(--color-primary); color: var(--color-white); border-radius: 130px 40px 150px 40px;
+  font: 500 14px/30px var(--font-body); letter-spacing: -.2px;
+}
+.testi__bubble p { margin: 0; }
+.testi__quote { position: absolute; z-index: 4; width: 117px; text-align: center; color: var(--color-accent); font: 700 250px/75px var(--font-body); }
+.testi__quote--open { left: 535px; top: 50px; }
+.testi__quote--close { left: 1046px; top: 443px; font-size: 300px; transform: rotate(180deg); }
+.testi__autor { position: absolute; z-index: 3; left: 713px; top: 627px; width: 422px; }
+.testi__who { margin: 0; color: var(--color-accent); font: 700 23px/35px var(--font-body); }
+.testi__who strong { display: block; font: 800 28px/35px var(--font-body); }
+.testi__social { display: flex; gap: 11px; margin-top: 9px; }
+.testi__social img { width: auto; height: 19px; }
+.testi__cta .btn { min-width: 317px; }
+.testi__cta { position: absolute; z-index: 3; left: 0; right: 0; top: 988px; display: flex; justify-content: center; }
+
+/* Galería de 4 fotos: tira de 1995 px centrada con un corrimiento de -347 px, como en el diseño */
+.galeria { overflow: hidden; margin-top: 109px; }
+.galeria__strip { display: flex; gap: 9px; width: 1995px; margin-left: calc(50% - 1067px); }
+.galeria img { flex: 0 0 412px; width: 412px; height: 549px; object-fit: cover; }
+.galeria img:first-child { flex-basis: 732px; width: 732px; }
+
+/* Anillos decorativos del fondo */
+.ring--right { width: 739.041px; height: 739.041px; top: 1289.4px; left: calc(50% + 350.5px); transform: rotate(-39.17deg); }
+.ring--left { width: 739.041px; height: 739.041px; top: 2519px; left: calc(50% - 997.6px); transform: rotate(-39.17deg); }
+
+@media (max-width: 960px) {
+  .page--spain { padding-bottom: 72px; }
+  .requisitos { grid-template-columns: 1fr; margin-bottom: 72px; }
+  .requisitos__title { margin-top: 56px; font-size: 34px; line-height: 1.3; }
+  .requisitos__title--puestos { margin-top: 56px; line-height: 1.3; }
+  .requisitos__puestos { grid-template-columns: 1fr 1fr; }
+  .requisitos__recepcion { width: 100%; max-width: 369px; height: auto; aspect-ratio: 369 / 320; margin-top: 48px; }
+  .requisitos__chef { width: 100%; max-width: 520px; margin: 32px 0 0; }
+  .requisitos__chef-photo { border-radius: 56px 28px 90px 28px; }
+  .requisitos__gorro { display: none; }
+  .fechas { min-height: 0; grid-template-columns: 1fr; row-gap: 32px; padding: 56px 28px; border-radius: 80px 24px 90px 24px; }
+  .fechas__col--incluye h2 { margin-left: 0; }
+  .fechas__listas { grid-template-columns: 1fr 1fr; }
+  .testi { height: auto; margin-top: 72px; display: flex; flex-direction: column; gap: 24px; }
+  .testi > * { position: static; }
+  .testi__foto { width: 100%; max-width: 446px; height: auto; align-self: center; }
+  .testi__foto--a { aspect-ratio: 347 / 463; }
+  .testi__foto--b { aspect-ratio: 446 / 666; }
+  .testi__bubble { order: -1; width: 100%; height: auto; padding: 56px 32px; border-radius: 80px 24px 80px 24px; }
+  .testi__quote { display: none; }
+  .testi__autor { width: auto; text-align: center; }
+  .testi__social { justify-content: center; }
+  .testi__cta { margin-top: 16px; }
+  .galeria { margin-top: 72px; }
+  .galeria__strip { width: auto; margin-left: 0; display: grid; grid-template-columns: repeat(2, 1fr); padding: 0 24px; }
+  .galeria img, .galeria img:first-child { width: 100%; height: auto; aspect-ratio: 412 / 549; grid-column: auto; }
+  .galeria img:first-child { grid-column: 1 / -1; aspect-ratio: 732 / 549; }
+  .ring--right, .ring--left { opacity: .5; }
+}
+@media (max-width: 560px) {
+  .requisitos__puestos, .fechas__listas { grid-template-columns: 1fr; }
+  .galeria__strip { gap: 10px; padding: 0 16px; }
+  .testi__who { font-size: 19px; line-height: 1.5; }
+  .testi__who strong { font-size: 24px; }
+}
