@@ -1,0 +1,149 @@
+/* OCE Idiomas — medidas del frame "OCE Idiomas" (1440 px) */
+
+/* Hero: variante de la página (textos y foto del frame; la curva, la flecha y el lema vienen de hero.css) */
+.hero--idiomas .hero__lead strong { font-weight: 900; }
+@media (min-width: 721px) {
+  .hero--idiomas .hero__photo { top: calc(var(--k) * -115); left: calc(var(--k) * -344); width: calc(100% + var(--k) * 443); height: calc(var(--k) * 1140); }
+  .hero--idiomas .hero__photo::after { background: linear-gradient(106.88deg, rgb(30 30 30 / .7) 14.215%, rgb(30 30 30 / 0) 63.557%); }
+  .hero--idiomas .hero__title {
+    left: calc(var(--k) * 151); top: calc(var(--k) * 281); width: calc(var(--k) * 608);
+    font-size: clamp(36px, calc(var(--k) * 65), 65px); line-height: 1.1538; text-shadow: 0 4px 100px rgb(0 0 0 / .9);
+  }
+  .hero--idiomas .hero__lead { left: calc(var(--k) * 151); top: calc(var(--k) * 455); width: calc(var(--k) * 565); font-weight: 500; text-shadow: 0 10px 50px #000; }
+  .hero--idiomas .hero__scroll { top: calc(var(--k) * 818); }
+  .hero--idiomas .hero__tagline { width: min(984px, 100% - 48px); }
+}
+
+/* Botón claro (azul cielo con texto azul) */
+.btn--light { background: #78abdd; color: var(--color-primary); }
+
+/* Título azul claro de las secciones */
+.h-title--light { color: #78abdd; }
+.h-title--sm { font-size: 42px; }
+.lang-text { margin: 0; font: 500 17px/35px var(--font-body); letter-spacing: -.2px; }
+.lang-text--lg { line-height: 40px; }
+
+/* Introducción: columna de textos + collage de la asesora */
+.lang-intro { position: relative; display: grid; grid-template-columns: 573px minmax(0, 1fr); column-gap: 82px; width: min(1144px, 100% - 48px); margin: 232px auto 0; align-items: start; }
+.lang-intro__photo { margin-top: 5px; aspect-ratio: 573 / 487; }
+.lang-intro__why { width: 594px; max-width: none; margin: 78px 0 0 -2px; }
+.lang-intro__why-text { width: 532px; max-width: 100%; margin-top: 9px; }
+.lang-intro__fast { width: 594px; max-width: none; margin-top: 52px; }
+.lang-intro__fast-text { width: 437px; max-width: 100%; margin-top: 15px; }
+.lang-intro__right .h-title { width: 593px; max-width: none; }
+.lang-intro__right .lang-text { width: 470px; max-width: 100%; margin-top: 10px; }
+
+/* Elegí tu destino */
+.lang-dest {
+  display: grid; grid-template-columns: 176px 175px; column-gap: 0; width: 527px; max-width: 100%; height: 385px; margin: 83px 0 0 -2px; padding: 93px 0 0 101px;
+  position: relative; background: var(--color-primary); color: var(--color-white); border-radius: 130px 40px 150px 40px;
+}
+.lang-dest__title { position: absolute; left: 100px; top: 32px; margin: 0; font: 800 35px/75px var(--font-body); color: #78abdd; white-space: nowrap; }
+.lang-dest__list { margin: 0; padding: 0; list-style: none; font: 600 17px/35px var(--font-body); letter-spacing: -.2px; }
+
+/* Collage: foto de la asesora sobre un bloque celeste, anillo detrás y recuadro "Requisito" */
+.lang-collage { position: absolute; left: 631px; top: 258px; width: 501px; height: 885px; pointer-events: none; }
+.lang-collage__bg { position: absolute; left: 0; top: 330px; width: 501px; height: 555px; background: #78abdd; border-radius: 150px 40px 80px 40px; }
+.lang-collage__photo { position: absolute; inset: 0; width: 501px; height: 885px; max-width: none; border-radius: 43px; }
+.lang-req {
+  position: absolute; left: 210px; top: 763px; width: 327px; height: 351px; padding: 79px 0 0 61px;
+  background: var(--color-primary); color: var(--color-white); border-radius: 110px 30px 120px 25px;
+}
+.lang-req h3 { margin: 0; font: 800 35px/40px var(--font-body); }
+.lang-req p { width: 227px; margin: 8px 0 0; font: 600 15px/40px var(--font-body); letter-spacing: -.2px; }
+
+/* Panel celeste: qué ofrecemos, idiomas y fechas */
+.lang-panel {
+  position: relative; display: grid; grid-template-columns: 354px 320px minmax(0, 1fr); width: min(1133px, 100% - 32px); min-height: 794px; padding: 0 0 62px 97px;
+  background: #78abdd; color: var(--color-white); border-radius: 130px 40px 150px 40px;
+  font: 600 17px/35px var(--font-body); letter-spacing: -.2px;
+}
+@media (min-width: 1200px) { .lang-panel { margin-left: calc(50% - 571px); } }
+.lang-panel__col { min-width: 0; }
+.lang-panel__title { margin: 0; font: 800 36px/45px var(--font-body); letter-spacing: 0; color: var(--color-primary); }
+.lang-panel__col--offer { padding-top: 65px; }
+.lang-panel__col--langs, .lang-panel__col--dates { padding-top: 54px; }
+.lang-panel__title--offer { margin: 0 0 15px 7px; line-height: 75px; }
+.lang-panel__col--offer .dots { margin: 0; width: 280px; font: inherit; }
+.lang-panel__title--exam { margin: 52px 0 8px 7px; line-height: 55px; }
+.lang-panel__exam { width: 295px; margin: 0 0 0 7px; }
+.lang-panel__langs { display: grid; grid-template-columns: 141px 1fr; margin: 15px 0 0 1px; }
+.lang-panel__langs ul { margin: 0; padding: 0; list-style: none; }
+.lang-panel__col--dates .lang-panel__text { width: 292px; max-width: 100%; margin: 11px 0 0 1px; }
+.lang-panel strong { font-weight: 900; }
+.lang-panel__globe { position: absolute; left: 579px; top: 326px; width: 660px; height: 880px; pointer-events: none; }
+.lang-panel__globe img { width: 100%; height: 100%; object-fit: cover; max-width: none; }
+.lang-panel__globe::after { content: ""; position: absolute; inset: 0; background: linear-gradient(-1.4735deg, #fff 2.4488%, rgb(255 255 255 / 0) 23.301%); }
+
+/* Duración de los cursos */
+.lang-dur { position: relative; width: 751px; max-width: calc(100% - 48px); min-height: 354px; margin: 146px 0 0 calc(50% - 604px); }
+.lang-dur__title { margin: 5px 0 0 41px; line-height: 75px; }
+.lang-dur__grid { display: grid; grid-template-columns: 239px 253px 196px; margin: 3px 0 0; padding-left: 41px; }
+.lang-dur__item h3 { margin: 0; font: 900 17px/35px var(--font-body); letter-spacing: -.2px; text-transform: uppercase; }
+.lang-dur__item .dots { font: 500 17px/35px var(--font-body); }
+.lang-dur__item--basic { padding-top: 5px; }
+.lang-dur__item--basic .dots { width: 217px; }
+.lang-dur__pre { white-space: pre-wrap; }
+
+/* Foto del equipo + botón */
+.lang-team { display: flex; flex-direction: column; align-items: center; width: min(1103px, 100% - 48px); margin: 0 auto; padding-bottom: 136px; }
+.lang-team__photo { width: 100%; height: auto; aspect-ratio: 1103 / 404; object-fit: cover; border-radius: 130px 40px 150px 40px; }
+.lang-team__btn { position: relative; margin-top: -23px; min-width: 408px; }
+
+/* Anillo decorativo azul (centro a 403 px a la derecha del eje) */
+.ring--idiomas { width: 558.675px; height: 558.675px; top: 1725px; left: calc(50% + 403.4px); transform: rotate(-162.39deg); }
+
+@media (max-width: 1199px) {
+  .lang-panel { grid-template-columns: 1fr 1fr 1fr; padding-left: 40px; padding-right: 24px; margin-left: 16px; }
+  .lang-panel__col--langs, .lang-panel__col--dates { padding-left: 16px; }
+  .lang-panel__langs { grid-template-columns: 1fr 1fr; }
+  .lang-panel__globe { left: auto; right: -140px; top: 360px; width: 520px; height: 693px; }
+  .lang-dur { margin-left: 24px; }
+}
+@media (max-width: 960px) {
+  .lang-intro { grid-template-columns: minmax(0, 1fr); margin-top: 96px; row-gap: 0; }
+  .lang-intro__left, .lang-intro__right { display: contents; }
+  .lang-intro__photo { order: 1; margin-top: 0; }
+  .lang-intro__right { }
+  .lang-intro__right .h-title { order: 2; margin-top: 40px; width: auto; }
+  .lang-intro__right .lang-text { order: 3; margin-top: 12px; width: auto; }
+  .lang-intro__why { order: 4; margin-top: 48px; width: auto; }
+  .lang-intro__why-text { order: 5; width: auto; }
+  .lang-intro__fast { order: 6; margin-top: 32px; width: auto; }
+  .lang-intro__fast-text { order: 7; width: auto; }
+  .lang-collage { order: 8; position: relative; left: auto; top: auto; width: min(501px, 100%); height: auto; margin: 40px auto 0; padding-bottom: 0; }
+  .lang-collage__bg { top: 40%; height: 60%; width: 100%; }
+  .lang-collage__photo { position: relative; width: 100%; height: auto; }
+  .lang-req { left: auto; right: -12px; top: auto; bottom: -48px; width: min(327px, 70%); height: auto; padding: 56px 24px 40px 40px; border-radius: 80px 24px 90px 20px; }
+  .lang-req p { width: auto; line-height: 1.6; }
+  .lang-dest { order: 9; width: 100%; height: auto; margin: 96px 0 0; padding: 100px 24px 48px 40px; border-radius: 90px 28px 100px 28px; grid-template-columns: 1fr 1fr; }
+  .lang-dest__title { left: 40px; top: 28px; font-size: 28px; }
+  .h-title, .h-title--sm { font-size: 30px; line-height: 1.3; }
+  .lang-intro__right .lang-text, .lang-text--lg { line-height: 1.8; }
+  .lang-panel { grid-template-columns: 1fr; min-height: 0; padding: 56px 28px 40px; margin-top: 64px; border-radius: 80px 24px 90px 24px; row-gap: 32px; }
+  .lang-panel__col--langs, .lang-panel__col--dates { padding: 0; }
+  .lang-panel__col--offer { padding-top: 0; }
+  .lang-panel__title--offer, .lang-panel__title--exam, .lang-panel__exam { margin-left: 0; }
+  .lang-panel__title--offer { line-height: 1.3; }
+  .lang-panel__title--exam { margin-top: 32px; line-height: 1.3; }
+  .lang-panel__title { font-size: 28px; line-height: 1.3; }
+  .lang-panel__langs { margin-left: 0; }
+  .lang-panel__col--dates .lang-panel__text { width: auto; margin-left: 0; }
+  .lang-panel__globe { position: relative; left: auto; right: auto; top: auto; width: min(420px, 100%); height: auto; margin: 16px auto -120px; aspect-ratio: 3 / 4; }
+  .lang-dur { width: auto; margin: 168px 24px 0; min-height: 0; }
+  .lang-dur__title { margin-left: 0; line-height: 1.3; }
+  .lang-dur__grid { grid-template-columns: 1fr 1fr; padding-left: 0; row-gap: 24px; }
+  .lang-dur__item--basic { padding-top: 0; }
+  .lang-dur__item--basic .dots { width: auto; }
+  .lang-team { margin-top: 56px; padding-bottom: 72px; }
+  .lang-team__photo { border-radius: 70px 24px 80px 24px; }
+  .ring--idiomas { opacity: .5; top: 900px; }
+}
+@media (max-width: 560px) {
+  .lang-intro__why, .lang-intro__fast { width: auto; }
+  .lang-dest { grid-template-columns: 1fr 1fr; }
+  .lang-dur__grid { grid-template-columns: 1fr; }
+  .lang-team__photo { aspect-ratio: 4 / 3; }
+  .lang-team__btn { min-width: 0; width: 100%; padding: 12px 16px; font-size: 12px; line-height: 1.3; height: auto; min-height: 57px; text-align: center; }
+  .ring--idiomas { left: 40%; }
+}
