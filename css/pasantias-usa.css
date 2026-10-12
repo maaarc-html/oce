@@ -1,0 +1,118 @@
+/* Practical Training USA — medidas del frame "Pasantias en USA" (1440 px) */
+
+.page--pasantias { overflow: clip; padding-bottom: 123px; }
+
+/* Hero: foto del diseño ya recortada y con el degradé oscuro incorporado; título es una imagen (Practical Training + "USA" manuscrito) */
+@media (min-width: 721px) {
+  .hero--pasantias .hero__photo { top: 0; left: 0; width: 100%; height: 100%; }
+  .hero--pasantias .hero__photo::after { background: none; }
+  .hero--pasantias .hero__title { top: calc(var(--k) * 191); width: calc(var(--k) * 377); line-height: 0; }
+  .hero--pasantias .hero__lead { top: calc(var(--k) * 467); width: calc(var(--k) * 377); font-size: calc(var(--k) * 17); line-height: 2.353; }
+  .hero--pasantias .hero__tagline { width: min(913px, 100% - 48px); }
+}
+.hero--pasantias .hero__title img { width: 100%; height: auto; }
+.hero--pasantias .hero__lead { font-size: clamp(15px, calc(var(--k) * 17), 17px); }
+@media (max-width: 720px) {
+  .hero--pasantias .hero__photo { height: 500px; }
+  .hero--pasantias .hero__title img { width: min(230px, 100%); }
+}
+
+/* Testimonio del participante: foto, datos y estatua */
+.perfil {
+  display: grid; grid-template-columns: 573px 532px; column-gap: 49px; align-items: start;
+  width: min(1154px, 100% - 48px); margin: 0 auto; padding-bottom: 106px;
+}
+@media (min-width: 1200px) { .perfil { margin-left: calc(50% - 572px); } }
+.perfil__photo { margin-top: 97px; aspect-ratio: 573 / 487; }
+.perfil__title { margin-top: 90px; line-height: 75px; }
+.perfil__list { margin: 14px 0 0 7px; padding: 0; max-width: 517px; list-style: none; }
+.perfil__list li { position: relative; padding-left: 34px; font: 500 17px/35px var(--font-body); letter-spacing: -.2px; }
+.perfil__list li::before { content: ""; position: absolute; left: 0; top: 9px; width: 21px; height: 21px; background: url("../assets/icons/bullet-flecha.svg") center / contain no-repeat; }
+.perfil__list strong { font-weight: 800; }
+
+.perfil__name-title { margin-top: 87px; padding-left: 41px; white-space: nowrap; font-size: 64px; line-height: 75px; }
+.perfil__who { margin: 4px 0 0 41px; max-width: 491px; color: var(--color-accent); font: 700 23px/35px var(--font-body); }
+.perfil__who strong { display: block; font: 800 28px/35px var(--font-body); }
+.perfil__social { display: flex; gap: 11px; margin: 26px 0 0 41px; }
+.perfil__social img { width: auto; height: 19px; }
+.perfil__statue { position: relative; margin-top: 256px; }
+.perfil__statue-photo { aspect-ratio: 532 / 504; }
+/* La mano y la antorcha de la estatua asoman por encima de la foto */
+.perfil__torch { position: absolute; z-index: 2; left: 78px; top: -192px; width: 296px; max-width: none; height: auto; pointer-events: none; }
+
+/* Galería de 4 fotos: tira de 1572 px centrada con un corrimiento de -66 px, como en el diseño */
+.galeria { overflow: hidden; }
+.galeria__strip { display: flex; gap: 16px; width: 1572px; margin-left: calc(50% - 786px); }
+.galeria img { flex: 0 0 381px; width: 381px; height: 508px; object-fit: cover; }
+
+/* Paneles azules: proceso y requisitos */
+.paso { width: min(1147px, 100% - 48px); min-height: 860px; margin: 108px auto 0; padding: 60px 0 0 110px; }
+.paso__title { margin: 0; font: 900 27px/75px var(--font-body); }
+.paso__cols { display: grid; grid-template-columns: 517px minmax(0, 1fr); margin-top: 1px; }
+.paso__list li { max-width: 387px; padding-left: 30px; font: 500 15px/35px var(--font-body); }
+.paso__list li::before { top: 10px; width: 15px; height: 15px; }
+.paso__list li + li { margin-top: 35px; }
+.paso__list strong { font-weight: 800; }
+.paso__list--right li { max-width: 383px; }
+.paso__list--right strong { font-weight: 900; }
+.paso--req { min-height: 722px; margin-top: 56px; padding-top: 49px; }
+.paso--req .paso__list li, .paso--req .paso__list--right li { max-width: 388px; padding-left: 35px; }
+.paso--req .paso__list li::before { top: 10.5px; }
+.paso--req .paso__list--right { margin-top: 1px; }
+.paso__cta { position: relative; display: flex; justify-content: center; margin-top: -26px; }
+
+/* Qué incluye / qué no incluye */
+.incluye { width: min(1149px, 100% - 48px); margin: 96px auto 0; }
+@media (min-width: 1200px) { .incluye { margin-left: calc(50% - 563px); } }
+.incluye__row { display: grid; grid-template-columns: 576px 573px; min-height: 802px; align-items: start; }
+.incluye__title { margin: 30.75px 0 0; font: 800 45px/75px var(--font-body); color: var(--color-primary); }
+.incluye__title--no { margin-top: 87.8px; line-height: 60px; }
+.incluye__list { margin: 4px 0 0; padding: 0; list-style: none; }
+.incluye__list li { position: relative; max-width: 414px; padding-left: 40px; font: 500 17px/35px var(--font-body); letter-spacing: -.2px; }
+.incluye__list li::before { content: ""; position: absolute; left: 0; top: 4px; width: 21px; height: 21px; background: url("../assets/icons/bullet-flecha.svg") center / contain no-repeat; }
+.incluye__list--no { margin-top: 6px; }
+.incluye__list--no li::before { top: 8px; }
+.incluye__media { position: relative; margin-top: -15px; }
+.incluye__photo { position: relative; z-index: 1; aspect-ratio: 573 / 690; }
+.incluye__shape { position: absolute; left: -137px; top: 506px; width: 340px; height: 311px; background: var(--color-accent); border-radius: 110px 30px 120px 25px; }
+.incluye__cta { display: flex; justify-content: center; margin-top: 161px; }
+.btn--wide { min-width: 419px; }
+
+/* Anillos decorativos del fondo */
+.ring--top { width: 523.678px; height: 523.678px; top: 1560.7px; left: calc(50% + 443.3px); transform: rotate(14.74deg); }
+.ring--bottom { width: 581.997px; height: 581.997px; top: 5652.8px; left: calc(50% - 962.2px); transform: rotate(-74.88deg); }
+
+@media (max-width: 960px) {
+  .perfil { grid-template-columns: 1fr; row-gap: 24px; padding-bottom: 56px; }
+  .perfil__photo { margin-top: 40px; }
+  .perfil__title { margin-top: 40px; }
+  .perfil__name-title { margin-top: 24px; padding-left: 0; white-space: normal; font-size: 40px; line-height: 1.2; }
+  .perfil__who, .perfil__social { margin-left: 0; }
+  .perfil__statue { margin-top: 48px; }
+  .perfil__torch { display: none; }
+  .photo-shape { border-radius: 56px 28px 90px 28px; }
+  .galeria__strip { width: auto; margin-left: 0; display: grid; grid-template-columns: repeat(2, 1fr); padding: 0 24px; }
+  .galeria img { width: 100%; height: auto; aspect-ratio: 381 / 508; }
+  .paso { min-height: 0; margin-top: 56px; padding: 48px 28px 72px; border-radius: 80px 24px 90px 24px; }
+  .paso--req { min-height: 0; padding-top: 48px; }
+  .paso__cols { grid-template-columns: 1fr; row-gap: 35px; }
+  .paso__list li, .paso--req .paso__list li { max-width: none; }
+  .paso__list--right { margin-top: 0; }
+  .page--pasantias { padding-bottom: 88px; }
+  .incluye { margin: 72px auto 0; }
+  .incluye__row { grid-template-columns: 1fr; min-height: 0; row-gap: 40px; }
+  .incluye__title { font-size: 34px; line-height: 1.3; margin-top: 0; }
+  .incluye__title--no { margin-top: 40px; line-height: 1.3; }
+  .incluye__media { margin-top: 0; }
+  .incluye__shape { left: -16px; top: auto; bottom: -48px; width: 55%; height: 45%; }
+  .incluye__cta { margin-top: 96px; }
+  .ring--top, .ring--bottom { opacity: .5; }
+}
+@media (max-width: 560px) {
+  .btn--wide { min-width: 0; width: 100%; height: auto; min-height: 57px; text-align: center; }
+  .perfil__who { font-size: 19px; line-height: 1.5; }
+  .perfil__who strong { font-size: 24px; }
+  .galeria__strip { gap: 10px; padding: 0 16px; }
+  .incluye__list li { max-width: none; }
+}
+@media (max-width: 720px) { .hero--pasantias .hero__tagline br { display: none; } }
