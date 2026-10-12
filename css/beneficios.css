@@ -1,0 +1,54 @@
+/* Beneficios con tarjetas de crédito — medidas del frame "Beneficios" (1440 px) */
+
+/* Hero más bajo (840 de 1440), sin lema; el degradé oscuro ya viene incorporado en la foto */
+.hero--benef { height: calc(var(--k) * 840); }
+.hero--benef .hero__photo { top: 0; left: 0; width: 100%; height: 100%; }
+.hero--benef .hero__photo::after { background: none; }
+/* La curva de este frame es otra (rotada 2,18°, casi sin sesgo) */
+.hero--benef .hero__curve { top: calc(var(--k) * 578.5); left: calc(var(--k) * -149.9); width: calc(100% + var(--k) * 428.8); height: calc(var(--k) * 580.3); transform: rotate(2.18deg) skewX(.02deg); }
+.hero--benef .hero__curve img { left: 2.29%; top: .33%; width: 97.71%; height: 99.67%; }
+.hero--benef .hero__title { top: calc(var(--k) * 212); width: calc(var(--k) * 608); font-size: clamp(34px, calc(var(--k) * 65), 65px); line-height: 1.1538; text-transform: uppercase; }
+.hero--benef .hero__scroll { top: calc(var(--k) * 563); }
+
+/* Tarjetas de beneficio */
+.benef { margin-bottom: 145px; }
+.benef__item { display: flex; flex-direction: column; align-items: center; }
+.benef__item + .benef__item { margin-top: 60px; }
+.gnb {
+  display: grid; grid-template-columns: 35.65% 43.28% 1fr; align-items: start; width: min(1153px, 100% - 48px); height: 354px;
+  border: 1px solid rgb(30 30 30 / .7); border-radius: 130px 40px 150px 40px; overflow: hidden;
+}
+.gnb__logo { width: 67.4%; height: auto; margin: 176px 0 0 18.25%; } /* % de la 1.ª columna (411 px) */
+.gnb--continental .gnb__logo { width: 70.3%; margin: 155px 0 0 16.06%; }
+.gnb__list { margin: 117px 0 0; padding: 0; font: 700 14px/35px var(--font-body); letter-spacing: -.2px; }
+.gnb__list li { margin-left: 21px; }
+.gnb__stat { width: 128px; margin: 87px 0 0 40.5px; text-align: center; font-family: var(--font-body); font-weight: 700; text-transform: uppercase; }
+.gnb--continental .gnb__stat { margin-top: 69px; }
+.gnb__pre { display: block; margin-bottom: -28px; font-size: 16px; line-height: 75px; }
+.gnb__num { display: block; font-size: 75px; line-height: 75px; }
+.gnb__label { display: block; margin-top: 4px; font-size: 14px; line-height: 20px; }
+.btn--azul { background: var(--color-primary); }
+.benef__btn { position: relative; margin-top: -29px; }
+
+@media (max-width: 1240px) {
+  .gnb__stat { margin-left: 16px; }
+}
+
+@media (max-width: 960px) {
+  .gnb { grid-template-columns: 1fr; justify-items: center; height: auto; padding: 48px 28px 64px; border-radius: 80px 24px 90px 24px; }
+  .gnb__logo, .gnb--continental .gnb__logo { width: min(277px, 80%); margin: 0; }
+  .gnb__list { margin: 28px 0 0; font-size: 14px; line-height: 1.9; justify-self: stretch; }
+  .gnb__list li { margin-left: 21px; }
+  .gnb__stat, .gnb--continental .gnb__stat { margin: 24px 0 0; }
+  .benef__item + .benef__item { margin-top: 48px; }
+  .benef { margin-bottom: 96px; }
+}
+
+@media (max-width: 720px) {
+  .hero--benef { height: auto; }
+  .hero--benef .hero__photo { top: 0; left: 0; width: 100%; height: 620px; }
+  .hero--benef .hero__photo::after { background: rgb(30 30 30 / .35); }
+  .hero--benef .hero__title { top: auto; width: auto; font-size: 38px; }
+  .hero--benef .hero__curve { display: none; }
+  .hero--benef .hero__scroll { top: auto; margin-bottom: 40px; }
+}
