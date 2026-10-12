@@ -1,0 +1,98 @@
+/* Work & Travel USA — medidas del frame "Programas de trabajo USA" (1440 px) */
+
+/* Estadísticas del aliado WEUSA */
+.stats-wrap { display: flex; flex-direction: column; align-items: center; margin-top: 24px; }
+.stats { width: min(1133px, 100% - 32px); min-height: 404px; padding: 60px 0 0; text-align: center; }
+.stats__title { margin: 0 auto; max-width: 806px; font: 800 33px/50px var(--font-body); }
+.stats__grid { display: grid; grid-template-columns: 360fr 374fr 413fr; margin: 18px 0 0; padding: 0; list-style: none; }
+.stats__grid li { display: flex; flex-direction: column; align-items: center; }
+.stats__pre { display: block; min-height: 30px; font: 500 17px/30px var(--font-body); letter-spacing: -.2px; }
+.stats__num { margin-top: 5px; font: 900 75px/75px var(--font-body); color: var(--color-highlight); }
+.stats__plus { color: var(--color-white); }
+.stats__label { margin-top: 7px; max-width: 240px; font: 500 17px/30px var(--font-body); letter-spacing: -.2px; }
+.stats__label--wide { margin-top: 1px; }
+.stats__grid li:first-child .stats__label { max-width: 172px; }
+.stats__btn { margin-top: -29px; position: relative; }
+@media (min-width: 1200px) { .stats { margin-left: calc(50% - 575px); align-self: flex-start; } .stats__btn { align-self: center; } }
+
+/* Qué es el programa + requisitos */
+.about { display: grid; grid-template-columns: 573fr 524fr; column-gap: 47px; width: min(1144px, 100% - 48px); margin: 32px auto 89px; padding-top: 97px; }
+.about__photo { aspect-ratio: 573 / 487; }
+.about__req-title { margin-top: 96px; }
+.about__list { margin: 18px 0 0 7px; max-width: 531px; }
+.about__col--right { padding-left: 0; }
+.about__title { padding-left: 37px; }
+.about__text { padding-left: 37px; max-width: 488px; margin-top: 12px; font: 500 17px/40px var(--font-body); letter-spacing: -.2px; }
+.about__text p { margin: 0; }
+.photo-shape--flip { border-radius: 150px 40px 80px 40px; }
+.about__photo2 { margin-top: 58px; aspect-ratio: 524 / 504; }
+
+/* Visa y ferias */
+.visa {
+  display: grid; grid-template-columns: 309px 363px minmax(0, 1fr); width: min(1147px, 100% - 32px); min-height: 770px;
+  padding: 88px 130px 60px 109px;
+}
+@media (min-width: 1200px) { .visa { margin-left: calc(50% - 565px); } }
+.visa h2 { margin: 0; white-space: nowrap; font: 900 27px/75px var(--font-body); }
+.visa p, .visa li { margin: 0; font: 500 16px/37px var(--font-body); letter-spacing: -.2px; }
+.visa__col > p { max-width: 236px; }
+.bullets--light li { padding-left: 34px; max-width: 269px; font: 500 16px/37px var(--font-body); }
+.bullets--light li::before { left: 3px; top: 8px; }
+.bullets--light li + li { margin-top: 37px; }
+.duration {
+  position: relative; width: min(928px, 100% - 48px); margin: -37px auto 0; padding: 25px 47px 22px; border-radius: 25px;
+  background: var(--color-accent); color: var(--color-white); text-align: center; font: 700 27px/45px var(--font-body);
+}
+
+/* Trabajos disponibles */
+.jobs { display: grid; grid-template-columns: 573px minmax(0, 1fr); column-gap: 85px; width: min(1146px, 100% - 48px); margin: 152px auto 0; align-items: start; }
+.jobs__photo { aspect-ratio: 573 / 487; }
+.jobs__text { margin-top: -7px; }
+.jobs__lists { display: grid; grid-template-columns: 245px 1fr; column-gap: 22px; margin-top: 17px; }
+.jobs__lists .dots { padding-left: 25.5px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 31.5px; width: min(1146px, 100% - 48px); margin: 105px auto 0; }
+.cards__item { height: 742px; border: 3px solid var(--color-primary); border-radius: 40px; }
+
+/* Sueldos y alojamiento */
+.pay { display: grid; grid-template-columns: 551fr 520fr; column-gap: 75px; width: min(1146px, 100% - 48px); margin: 128px auto 237px; align-items: start; }
+.pay__text .copy { margin-top: 14px; }
+.pay__title2 { margin-top: 32px; }
+.pay__title2 + .copy { margin-top: 0; }
+.pay__photo { aspect-ratio: 520 / 599; }
+.pay__media { display: flex; flex-direction: column; align-items: center; }
+.pay__btn { margin-top: -27px; position: relative; }
+
+/* Anillos decorativos del fondo */
+.ring--right { width: 500.74px; height: 500.74px; top: 2199.5px; left: calc(50% + 455.5px); transform: rotate(27.64deg); }
+.ring--left { width: 1039.75px; height: 1039.75px; top: 3605px; left: calc(50% - 1344px); }
+
+@media (max-width: 960px) {
+  .br-desktop { display: none; }
+  .stats { padding: 40px 24px 56px; }
+  .stats__title { font-size: 26px; line-height: 1.3; }
+  .stats__grid { grid-template-columns: 1fr; gap: 28px; }
+  .stats__num { font-size: 56px; line-height: 1.1; }
+  .about { grid-template-columns: 1fr; row-gap: 40px; padding-top: 48px; margin-bottom: 56px; }
+  .about__col--right { display: flex; flex-direction: column; order: -1; }
+  .about__title, .about__text { padding-left: 0; }
+  .about__req-title { margin-top: 40px; }
+  .photo-shape { border-radius: 56px 28px 90px 28px; }
+  .photo-shape--flip { border-radius: 90px 28px 56px 28px; }
+  .visa { grid-template-columns: 1fr; gap: 24px; padding: 56px 28px; min-height: 0; border-radius: 80px 24px 90px 24px; }
+  .visa__col > p, .bullets--light li { max-width: none; }
+  .duration { font-size: 20px; line-height: 1.5; padding: 24px; }
+  .jobs { grid-template-columns: 1fr; margin-top: 72px; row-gap: 32px; }
+  .jobs__text { margin-top: 0; }
+  .cards { grid-template-columns: 1fr; margin-top: 56px; }
+  .cards__item { height: 220px; }
+  .pay { grid-template-columns: 1fr; row-gap: 40px; margin: 72px auto 88px; }
+  .pay__title2 { margin-top: 32px; }
+  .h-title { font-size: 34px; line-height: 1.3; }
+  .ring--right, .ring--left { opacity: .5; }
+}
+@media (max-width: 560px) {
+  .stats__title { font-size: 22px; }
+  .jobs__lists { grid-template-columns: 1fr; }
+  .duration { font-size: 17px; }
+  .ring--left { left: -60%; }
+}
