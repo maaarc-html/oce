@@ -15,3 +15,16 @@ document.addEventListener('click', (e) => {
     nav?.querySelectorAll('.nav__item--open').forEach((i) => i.classList.remove('nav__item--open'));
   }
 });
+
+/* Botón flotante de WhatsApp en todas las páginas */
+(() => {
+  if (document.querySelector('.wa-float')) return;
+  const a = document.createElement('a');
+  a.className = 'wa-float';
+  a.href = 'https://wa.me/595986612300';
+  a.target = '_blank';
+  a.rel = 'noopener';
+  a.setAttribute('aria-label', 'Escribinos por WhatsApp');
+  a.innerHTML = '<img src="assets/icons/whatsapp.svg" alt="">';
+  document.body.appendChild(a);
+})();
