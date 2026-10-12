@@ -1,0 +1,14 @@
+:root {
+  --color-primary: #004e9c;
+  --color-accent: #c42400;
+  --color-text: #1e1e1e;
+  --color-white: #fff;
+  --color-highlight: #ffd500; /* amarillo de íconos; confirmar valor exacto en Figma */
+
+  --font-body: "Montserrat", system-ui, sans-serif;
+  --font-nav: "Gotham", "Montserrat", system-ui, sans-serif;
+
+  --container: 1208px;
+  --nav-h: 99px;
+  --radius-card: 17px;
+}
